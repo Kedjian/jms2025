@@ -5,6 +5,7 @@ public class methodsexercise {
         calculateScore(true, 1000, 8, 500);
         calculateScore(true, 8100, 16, 340);
         simpleCalculator(2, 6, 4, 2);
+        simpleCalculator(3, 6, 8, 1);
     }
     public static void calculateScore(boolean gameOver, int score, int levelCompleted, int bonus) {
         int finalScore = score;
@@ -18,9 +19,9 @@ public class methodsexercise {
         double sub = a - b - c - d;
         double mul = a * b * c * d;
         double div = a / b / c / d;
-        System.out.println("Sum of " + a + " and " + b + " and " + c + " and " + d + " = " + sum);
-        System.out.println("Subtraction of " + a + " and " + b + " and " + c + " and " + d + " = " + sub);
-        System.out.println("Multiplication of " + a + " and " + b + " and " + c + " and " + d + " = " + mul);
-        System.out.println("Division of " + a + " and " + b + " and " + c + " and " + " = " + div);
+        System.out.println("Sum of " + a + " and " + b + " and " + c + " and " + d + " = " + sum + ".");
+        System.out.println("Subtraction of " + a + " and " + b + " and " + c + " and " + d + " = " + sub + ".");
+        System.out.println("Multiplication of " + a + " and " + b + " and " + c + " and " + d + " = " + mul + ".");
+        System.out.println("Division of " + a + " and " + b + " and " + c + " and " + d + " = " + div + ".");
     }
 }
