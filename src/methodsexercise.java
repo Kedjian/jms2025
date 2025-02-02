@@ -43,6 +43,10 @@ public class methodsexercise {
         shouldWakeUp(true, 8);
         shouldWakeUp(true, -1);
 
+        isLeapYear(-1600);
+        isLeapYear(1600);
+        isLeapYear(2017);
+
     }
     public static int calculateScore(boolean gameOver, int score, int levelCompleted, int bonus) {
 
@@ -129,10 +133,25 @@ public class methodsexercise {
         if (hourOfDay < 0 || hourOfDay > 23) {
         } else {
             if (barking && hourOfDay < 8 || hourOfDay > 22) {
-                System.out.print("True. "); return true;
+                System.out.println("True. "); return true;
             } else {
-                System.out.print("False. "); return false;
+                System.out.println("False. "); return false;
             }
-        } System.out.print("False. "); return false;
+        } System.out.println("False. "); return false;
+    }
+    public static boolean isLeapYear(int year) {
+        if (year >= 1 && year <= 9999) {
+            if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+                System.out.println("Leap year.");
+                return true;
+            }
+            else
+                System.out.println("Not a leap year.");
+                return false;
+        }
+        else {
+            System.out.println("Invalid input.");
+            return false;
+        }
     }
 }
