@@ -47,6 +47,24 @@ public class methodsexercise {
         isLeapYear(1600);
         isLeapYear(2017);
 
+        areEqualByThreeDecimalPlaces(-3.1756, -3.175);
+        areEqualByThreeDecimalPlaces(3.175, 3.176);
+        areEqualByThreeDecimalPlaces(3.0, 3.0);
+        areEqualByThreeDecimalPlaces(-3.123, 3.123);
+
+        hasEqualSum(1, 1, 1);
+        hasEqualSum(1, 1, 2);
+        hasEqualSum(1, -1, 0);
+        hasEqualSum(5, 5, 10);
+        hasEqualSum(3, 6, 15);
+
+        hasTeen(9, 99, 19);
+        hasTeen(23,15,42);
+        hasTeen(22,23,24);
+        isTeen(13);
+        isTeen(17);
+        isTeen(69);
+
     }
     public static int calculateScore(boolean gameOver, int score, int levelCompleted, int bonus) {
 
@@ -153,5 +171,36 @@ public class methodsexercise {
             System.out.println("Invalid input.");
             return false;
         }
+    }
+    public static boolean areEqualByThreeDecimalPlaces(double a, double b) {
+        double holdNum1 = a; double holdNum2 = b;
+        a = (long) (a * 1000); b = (long) (b * 1000);
+        if (a == b) {
+            System.out.println(holdNum1 + " and " + holdNum2 + " are equal.");
+            return true;
+        } else
+            System.out.println(holdNum1 + " and " + holdNum2 + " are not equal.");
+            return false;
+    }
+    public static boolean hasEqualSum(int a, int b, int c) {
+        if (a + b == c) {
+            System.out.println(a + " + "  + b + " " + "equals " + c + ".");
+            return true;
+        } else {
+            System.out.println(a + " +" + " " + b + " does not equal to " + c + ".");
+            return false;
+        }
+    }
+    public static boolean hasTeen(int a, int b, int c) {
+        if (a >= 13 && a <= 19 || b >= 13 && b <= 19 || c >= 13 && c <= 19) {
+            System.out.println("At least one of the values is in range of 13 and 19.");
+            return true;
+        } System.out.println("No value is in range of 13 and 19"); return false;
+    }
+    public static boolean isTeen(int a) {
+        if (a >= 13 && a <= 19) {
+            System.out.println("The value is in range of 13 and 19.");
+            return true;
+        } System.out.println("The value is not in range of 13 and 19"); return false;
     }
 }
