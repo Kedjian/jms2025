@@ -27,6 +27,22 @@ public class methodsexercise {
         highScorePosition = calculateHighScorePosition(20);
         displayHighScorePosition("Oskar", highScorePosition);
 
+        checkNumber(5);
+        checkNumber(-5);
+        checkNumber(0);
+
+        printConversion(1.5);
+        printConversion(10.25);
+        printConversion(-0.75);
+
+        printMegaBytesAndKiloBytes(2500);
+        printMegaBytesAndKiloBytes(-1024);
+
+        shouldWakeUp(true, 1);
+        shouldWakeUp(false, 2);
+        shouldWakeUp(true, 8);
+        shouldWakeUp(true, -1);
+
     }
     public static int calculateScore(boolean gameOver, int score, int levelCompleted, int bonus) {
 
@@ -63,15 +79,60 @@ public class methodsexercise {
         if (playerScore >= 1000) {
             result = 1;
         }
-        else if (playerScore >= 500 && playerScore < 1000) {
+        else if (playerScore >= 500) {
             result = 2;
         }
-        else if (playerScore >= 100 && playerScore < 500) {
+        else if (playerScore >= 100) {
             result = 3;
         }
         else {
             result = 4;
         }
         return result;
+    }
+
+    public static void checkNumber(int number) {
+        if (number > 0) {
+            System.out.println(number + " is a positive number.");
+        }
+        else if (number == 0) {
+            System.out.println(number + " is a zero number.");
+        }
+        else {
+            System.out.println(number + " is a negative number.");
+        }
+    }
+    public static long toMilesPerHour(double kilometersPerHour) {
+        if (kilometersPerHour <= 0) {
+            return -1;
+        } else {
+            return Math.round(kilometersPerHour * 0.6214);
+        }
+    }
+    public static void printConversion (double kilometersPerHour) {
+        if (kilometersPerHour <= 0) {
+            System.out.println("Invalid value.");
+        } else {
+            System.out.println(kilometersPerHour + "km/h = " + toMilesPerHour(kilometersPerHour) + " m/h.");
+        }
+    }
+    public static void printMegaBytesAndKiloBytes(int kiloBytes) {
+        if (kiloBytes < 0) {
+            System.out.println("Invalid value.");
+        } else {
+            int megaBytes = kiloBytes / 1024;
+            int kilobytes = kiloBytes % 1024;
+            System.out.println(kiloBytes + "KB = " + megaBytes + "MB = " + kilobytes + "KB.");
+        }
+    }
+    public static boolean shouldWakeUp(boolean barking, int hourOfDay) {
+        if (hourOfDay < 0 || hourOfDay > 23) {
+        } else {
+            if (barking && hourOfDay < 8 || hourOfDay > 22) {
+                System.out.print("True. "); return true;
+            } else {
+                System.out.print("False. "); return false;
+            }
+        } System.out.print("False. "); return false;
     }
 }
