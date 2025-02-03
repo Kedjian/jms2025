@@ -65,6 +65,14 @@ public class methodsexercise {
         isTeen(17);
         isTeen(69);
 
+        convertToCentimeters(5, 8);
+        convertToCentimeters(5, 10);
+        convertToCentimeters(67);
+        convertToCentimeters(23);
+
+        getDurationString(7622);
+        getDurationString(212,62);
+
     }
     public static int calculateScore(boolean gameOver, int score, int levelCompleted, int bonus) {
 
@@ -202,5 +210,26 @@ public class methodsexercise {
             System.out.println("The value is in range of 13 and 19.");
             return true;
         } System.out.println("The value is not in range of 13 and 19"); return false;
+    }
+    public static double convertToCentimeters(int heightInInches) {
+        double centimeters = heightInInches * 2.54;
+        System.out.println("Result: " + centimeters + ".");
+        return centimeters;
+    }
+    public static void convertToCentimeters(int heightInFeet, int heightInInches) {
+        double feetToInches = heightInFeet * 12 + heightInInches;
+        int feetToInchesInt = (int) feetToInches;
+        convertToCentimeters(feetToInchesInt);
+    }
+    public static String getDurationString(int seconds) {
+        int minutes = seconds / 60;
+        return getDurationString(seconds, minutes);
+        }
+    public static String getDurationString(int seconds, int minutes) {
+        int hours = minutes / 60;
+        int remainingMinutes = minutes % 60;
+        int remainingSeconds = seconds % 60;
+        System.out.println(hours + "h:" + remainingMinutes + "m:" + remainingSeconds + "s.");
+        return hours + " hours and " + remainingMinutes + " minutes and " + remainingSeconds + " seconds.";
     }
 }
