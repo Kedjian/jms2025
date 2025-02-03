@@ -73,6 +73,29 @@ public class methodsexercise {
         getDurationString(7622);
         getDurationString(212,62);
 
+        area(5.0);
+        area(-1);
+        area(5.0, 4.0);
+        area(-1.0, 4.0);
+
+        printYearsAndDays(525600);
+        printYearsAndDays(1051200);
+        printYearsAndDays(561600);
+
+        printEqual(1, 1, 1);
+        printEqual(1, 1, 2);
+        printEqual(-1, -1, -1);
+        printEqual(1, 2,3);
+
+        isCatPlaying(true, 10);
+        isCatPlaying(false, 36);
+        isCatPlaying(false, 35);
+
+        isJohnSatisfied("Saturday", true, 1, 6);
+        isJohnSatisfied("Saturday", true, 1, 4);
+        isJohnSatisfied("Saturday", false, 1, 4);
+        isJohnSatisfied("Not a Saturday!", true, 3, 2);
+
     }
     public static int calculateScore(boolean gameOver, int score, int levelCompleted, int bonus) {
 
@@ -231,5 +254,68 @@ public class methodsexercise {
         int remainingSeconds = seconds % 60;
         System.out.println(hours + "h:" + remainingMinutes + "m:" + remainingSeconds + "s.");
         return hours + " hours and " + remainingMinutes + " minutes and " + remainingSeconds + " seconds.";
+    }
+    public static double area(double radius) {
+        if (radius >= 0) {
+            double area = Math.PI * radius * radius; System.out.println(area); return area;
+        } else {
+            System.out.println("Invalid input."); return -1.0;
+        }
+    }
+    public static double area(double x, double y) {
+        if (x >= 0 && y >= 0) {
+            double area = Math.PI * x * y; System.out.println(area); return x * y;
+        } else {
+            System.out.println("Invalid input."); return -1.0;
+        }
+    }
+    public static void printYearsAndDays(long minutes) {
+        if (minutes >= 0) {
+            int min_per_hour = 60; int hours_per_day = 24; int days_per_year = 365;
+            int min_per_day = hours_per_day * min_per_hour; int min_per_year = min_per_hour * hours_per_day * days_per_year;
+            long years = minutes / min_per_year;
+            long days = (minutes / min_per_day) % days_per_year;
+            System.out.println(minutes + "min = " + years + "y and " + days + "d.");
+        } else {
+            System.out.println("Invalid value.");
+        }
+    }
+    public static void printEqual(int a, int b, int c) {
+        if (a < 0 || b < 0 || c < 0) {
+            System.out.println("Invalid value.");
+        } else if (a == b && b == c && c == a) {
+            System.out.println("All numbers are equal.");
+        } else if (a != b && b != c && c != a) {
+            System.out.println("All numbers are different.");
+        } else {
+            System.out.println("Neither all are equal or different.");
+        }
+    }
+    public static boolean isCatPlaying(boolean summer, int temperature) {
+        if (summer == false && temperature >= 25 && temperature <= 35) {
+            String message = "The cat is playing."; System.out.println(message);
+            return true;
+        } else if (summer == true && temperature >= 25 && temperature <= 45) {
+                String message = "The cat is playing."; System.out.println(message);
+                return true;
+        } else {
+            String message = "The cat is not playing."; System.out.println(message);
+            return false;
+        }
+    }
+    public static boolean isJohnSatisfied(String day, boolean energy, int restTimeInHours, int workTimeInHours) {
+        boolean isRested = false;
+        if (day == "Saturday") {
+            if (energy) {
+                double thresholdValue = workTimeInHours * 0.25;
+                if (restTimeInHours >= thresholdValue) {
+                    isRested = true;
+                    if (isRested) {
+                        System.out.println("John enjoys a good saturday of balanced work.");
+                        return true;
+                    }
+                } System.out.println("John can't enjoy his saturday. He didn't allow himself to rest enough."); return false;
+            } System.out.println("John was too tried to begin with. He didn't even start."); return false;
+        } System.out.println("John hates working on days that aren't a saturday."); return false;
     }
 }
