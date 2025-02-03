@@ -96,6 +96,11 @@ public class methodsexercise {
         isJohnSatisfied("Saturday", false, 1, 4);
         isJohnSatisfied("Not a Saturday!", true, 3, 2);
 
+        didBidufGraduate(true, true, false);
+        didBidufGraduate(false, true, false);
+        didBidufGraduate(true, false, false);
+        didBidufGraduate(true, true, true);
+
     }
     public static int calculateScore(boolean gameOver, int score, int levelCompleted, int bonus) {
 
@@ -317,5 +322,20 @@ public class methodsexercise {
                 } System.out.println("John can't enjoy his saturday. He didn't allow himself to rest enough."); return false;
             } System.out.println("John was too tried to begin with. He didn't even start."); return false;
         } System.out.println("John hates working on days that aren't a saturday."); return false;
+    }
+    public static boolean didBidufGraduate(boolean maths, boolean matlab, boolean electrotechnics) {
+        if (maths == true) {
+            if (matlab == true || electrotechnics == true) {
+                System.out.println("Biduf did graduate.");
+            }
+        } else if (matlab == true) {
+            if (maths == true || electrotechnics == true) {
+                System.out.println("Biduf did graduate.");
+            }
+        } else if (electrotechnics == true) {
+            if (maths == true || matlab == true) {
+                System.out.println("Biduf did graduate.");
+            }
+        } return false;
     }
 }
