@@ -101,6 +101,12 @@ public class methodsexercise {
         didBidufGraduate(true, false, false);
         didBidufGraduate(true, true, true);
 
+        isADividableOfB(6,2);
+        isADividableOfB(3,2);
+        isADividableOfB(4,2);
+        isADividableOfB(4,0);
+        isADividableOfB(0,4);
+
     }
     public static int calculateScore(boolean gameOver, int score, int levelCompleted, int bonus) {
 
@@ -337,5 +343,16 @@ public class methodsexercise {
                 System.out.println("Biduf did graduate.");
             }
         } return false;
+    }
+    public static boolean isADividableOfB(int a, int b) {
+        if (a > 0 && b != 0 && b > 0) {
+            if (a % b == 0) {
+                System.out.println(a + " is dividable by " + b + ".");
+                return false;
+            } else {
+                System.out.println(a + " isn't dividable by " + b + ".");
+                return true;
+            }
+        } System.out.println("Invalid input."); return false;
     }
 }
