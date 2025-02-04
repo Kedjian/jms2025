@@ -107,5 +107,11 @@ public class controlflowexercise {
     public static double calculateInterest(double amount, double interestRate) {
         return (amount * (interestRate / 100));
     }
+    public static boolean isPrime(int wholeNumber) {
+        if (wholeNumber <= 2) {
+            return (wholeNumber == 2);
+        }
+        return true;
+    }
 }
 
