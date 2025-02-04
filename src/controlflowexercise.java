@@ -44,6 +44,17 @@ public class controlflowexercise {
             }
             System.out.println("$100.00 at " + rate + " % interest = $" + interestAmount + ".");
         }
+
+        int primeCounter = 0;
+        for (int i = 1; i <= 1000; i++) {
+            if (isPrime(i)) {
+                System.out.println("Prime at " + i + ".");
+                primeCounter++;
+                if (primeCounter == 10) {
+                    break;
+                }
+            }
+        }
     }
     public static String getQuarter(String month) {
         return switch (month) {
@@ -110,6 +121,11 @@ public class controlflowexercise {
     public static boolean isPrime(int wholeNumber) {
         if (wholeNumber <= 2) {
             return (wholeNumber == 2);
+        }
+        for (int divisor = 2; divisor <= wholeNumber / 2; divisor++) {
+            if (wholeNumber % divisor == 0) {
+                return false;
+            }
         }
         return true;
     }
