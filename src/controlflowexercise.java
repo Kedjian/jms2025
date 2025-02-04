@@ -26,6 +26,12 @@ public class controlflowexercise {
         printWeekDay(7);
         printWeekDay(8);
 
+        printNumberInWord(1);
+        printNumberInWord(2);
+        printNumberInWord(3);
+        printNumberInWord(9);
+        printNumberInWord(-10);
+
     }
     public static String getQuarter(String month) {
         return switch (month) {
@@ -75,6 +81,15 @@ public class controlflowexercise {
             System.out.println("Saturday.");
         } else {
             System.out.println("Invalid day.");
+        }
+    }
+    public static void printNumberInWord(int number) {
+        switch (number) {
+            case 0 -> System.out.println("Zero.");
+            case 1 -> System.out.println("One.");
+            case 2 -> System.out.println("Two.");
+            case 9 -> System.out.println("Nine.");
+            default -> System.out.println("Other.");
         }
     }
 }
