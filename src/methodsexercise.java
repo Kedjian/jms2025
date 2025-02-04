@@ -109,7 +109,6 @@ public class methodsexercise {
 
     }
     public static int calculateScore(boolean gameOver, int score, int levelCompleted, int bonus) {
-
         int finalScore = score;
         if (gameOver) {
             finalScore += (levelCompleted * bonus);
@@ -124,7 +123,6 @@ public class methodsexercise {
         double div = a / b / c / d; System.out.println(div);
     }
     public static int calculateMyAge(int dateOfBirth) {
-
         return (2025 - dateOfBirth);
     }
     public static boolean isTooYoung(int age) {
