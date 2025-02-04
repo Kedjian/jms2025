@@ -32,6 +32,18 @@ public class controlflowexercise {
         printNumberInWord(9);
         printNumberInWord(-10);
 
+        for (double rate = 2.0; rate <= 5.0; rate++) {
+            double interestAmount = calculateInterest(10000.0, rate);
+            System.out.println("10,000 at " + rate + " % interest = " + interestAmount);
+        }
+
+        for (double rate = 7.5; rate <= 10.0; rate += 0.25) {
+            double interestAmount = calculateInterest(100.00, rate);
+            if (interestAmount > 8.5) {
+                break;
+            }
+            System.out.println("$100.00 at " + rate + " % interest = $" + interestAmount + ".");
+        }
     }
     public static String getQuarter(String month) {
         return switch (month) {
@@ -91,6 +103,9 @@ public class controlflowexercise {
             case 9 -> System.out.println("Nine.");
             default -> System.out.println("Other.");
         }
+    }
+    public static double calculateInterest(double amount, double interestRate) {
+        return (amount * (interestRate / 100));
     }
 }
 
