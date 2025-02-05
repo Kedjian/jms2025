@@ -45,6 +45,46 @@ public class controlflowexercise {
         sumOdd(100,-100);
         sumOdd(100,1000);
 
+        int startNum = 5;
+        int endNum = 20;
+
+        while (startNum <= endNum) {
+            startNum++;
+            if (!isEvenNumber(startNum)) {
+                continue;
+            } System.out.println("Even number: " + startNum + ".");
+        }
+
+        for (int i = 1; i <= 5 ; i++) {
+            System.out.println(i);
+        }
+
+        int j = 1;
+        while (j <= 5) {
+            System.out.println(j);
+            j++;
+        }
+
+        int k = 1;
+        while (k <= 5) {
+            System.out.println(k);
+            k++;
+        }
+
+        int l = 1;
+        do {
+            System.out.println(l);
+            l++;
+        } while (l <= 5);
+
+        int num = 0;
+        while (num < 50) {
+            num += 5;
+            if (num % 25 == 0) {
+                continue;
+            } System.out.print(num + "_");
+        } System.out.println(".");
+
         for (double rate = 2.0; rate <= 5.0; rate++) {
             double interestAmount = calculateInterest(10000.0, rate);
             System.out.println("10,000 at " + rate + " % interest = " + interestAmount);
@@ -183,6 +223,12 @@ public class controlflowexercise {
                 }
             } System.out.println(sum + ".");
         } return -1;
+    }
+
+    public static boolean isEvenNumber(int n) {
+        if (n % 2 == 0) {
+            return true;
+        } return false;
     }
 }
 
