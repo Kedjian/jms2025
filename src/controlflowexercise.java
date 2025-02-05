@@ -45,6 +45,9 @@ public class controlflowexercise {
         sumOdd(100,-100);
         sumOdd(100,1000);
 
+        sumDigits(125);
+
+
         int startNum = 5;
         int endNum = 20;
 
@@ -229,6 +232,17 @@ public class controlflowexercise {
         if (n % 2 == 0) {
             return true;
         } return false;
+    }
+
+    public static int sumDigits(int n) {
+        int sum = 0;
+        if (n > 0) {
+            while (n > 9) {
+                sum += (n % 10);
+                n = n / 10;
+            } sum += n;
+            System.out.println(sum + "."); return sum;
+        } return -1;
     }
 }
 
