@@ -1,12 +1,18 @@
 public class controlflowexercise {
     public static void main(String[] args) {
-        String month = "JANUARY"; System.out.println(getQuarter(month));
-        month = "JULY"; System.out.println(getQuarter(month));
-        month = "Not a month"; System.out.println(getQuarter(month));
+        String month = "JANUARY";
+        System.out.println(getQuarter(month));
+        month = "JULY";
+        System.out.println(getQuarter(month));
+        month = "Not a month";
+        System.out.println(getQuarter(month));
 
-        String natoCode = "A"; System.out.println(getNatoEquivalent(natoCode));
-        natoCode = "B"; System.out.println(getNatoEquivalent(natoCode));
-        natoCode = "E"; System.out.println(getNatoEquivalent(natoCode));
+        String natoCode = "A";
+        System.out.println(getNatoEquivalent(natoCode));
+        natoCode = "B";
+        System.out.println(getNatoEquivalent(natoCode));
+        natoCode = "E";
+        System.out.println(getNatoEquivalent(natoCode));
 
         printDayOfWeek(0);
         printDayOfWeek(1);
@@ -32,6 +38,13 @@ public class controlflowexercise {
         printNumberInWord(9);
         printNumberInWord(-10);
 
+        sumOdd(1, 100);
+        sumOdd(-1, 100);
+        sumOdd(100, 100);
+        sumOdd(13,13);
+        sumOdd(100,-100);
+        sumOdd(100,1000);
+
         for (double rate = 2.0; rate <= 5.0; rate++) {
             double interestAmount = calculateInterest(10000.0, rate);
             System.out.println("10,000 at " + rate + " % interest = " + interestAmount);
@@ -55,7 +68,22 @@ public class controlflowexercise {
                 }
             }
         }
+
+        int sum = 0;
+        int count = 0;
+        for (int i = 1; i <= 1000; i++) {
+            if ((i % 3 == 0) && (i % 5 == 0)) {
+                count++;
+                sum += i;
+                System.out.println("Found a match = " + i + ".");
+            }
+            if (count == 5) {
+                break;
+            }
+        }
+        System.out.println("Total matches = " + sum + ".");
     }
+
     public static String getQuarter(String month) {
         return switch (month) {
             case "JANUARY", "FEBRUARY", "MARCH" -> "1st.";
@@ -65,6 +93,7 @@ public class controlflowexercise {
             default -> " '" + month + "' " + " is not valid.";
         };
     }
+
     public static String getNatoEquivalent(String letter) {
         return switch (letter) {
             case "A" -> "Able.";
@@ -75,6 +104,7 @@ public class controlflowexercise {
             default -> letter + " is not valid.";
         };
     }
+
     public static void printDayOfWeek(int day) {
         switch (day) {
             case 0 -> System.out.println("Sunday.");
@@ -87,6 +117,7 @@ public class controlflowexercise {
             default -> System.out.println("Invalid day.");
         }
     }
+
     public static void printWeekDay(int day) {
         if (day == 1) {
             System.out.println("Sunday.");
@@ -106,6 +137,7 @@ public class controlflowexercise {
             System.out.println("Invalid day.");
         }
     }
+
     public static void printNumberInWord(int number) {
         switch (number) {
             case 0 -> System.out.println("Zero.");
@@ -115,9 +147,11 @@ public class controlflowexercise {
             default -> System.out.println("Other.");
         }
     }
+
     public static double calculateInterest(double amount, double interestRate) {
         return (amount * (interestRate / 100));
     }
+
     public static boolean isPrime(int wholeNumber) {
         if (wholeNumber <= 2) {
             return (wholeNumber == 2);
@@ -129,5 +163,27 @@ public class controlflowexercise {
         }
         return true;
     }
+
+    public static boolean isOdd(int num) {
+        if (num > 0) {
+            if (num % 2 == 1) {
+                return true;
+            } return false;
+        } else {
+            return false;
+        }
+    }
+
+    public static int sumOdd(int start, int end) {
+        int sum = 0;
+        if (start <= end && start > 0) {
+            for (int i = start; (i <= end); i++) {
+                if (isOdd(i)) {
+                    sum += i;
+                }
+            } System.out.println(sum + ".");
+        } return -1;
+    }
 }
+
 
