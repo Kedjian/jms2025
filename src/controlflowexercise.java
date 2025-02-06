@@ -264,6 +264,16 @@ public class controlflowexercise {
             return false;
         }
     }
+
+    public static int sumFirstAndLastDigit(int number) {
+        if (number >= 0) {
+            int firstDigit = number;
+            int lastDigit = number % 10;
+            while (firstDigit >= 10) {
+                firstDigit /= 10;
+            } return firstDigit + lastDigit;
+        } return -1;
+    }
 }
 
 
