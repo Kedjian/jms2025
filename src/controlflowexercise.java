@@ -47,6 +47,10 @@ public class controlflowexercise {
 
         sumDigits(125);
 
+        isPalindrome(11);
+        isPalindrome(121);
+        isPalindrome(-212);
+        isPalindrome(-56);
 
         int startNum = 5;
         int endNum = 20;
@@ -243,6 +247,22 @@ public class controlflowexercise {
             } sum += n;
             System.out.println(sum + "."); return sum;
         } return -1;
+    }
+
+    public static boolean isPalindrome(int number) {
+        int reverse = 0;
+        int original = number;
+        while (original != 0) {
+            int lastDigit = original % 10;
+            reverse = reverse * 10 + lastDigit;
+            original /= 10;
+        } if (number == reverse) {
+            System.out.println(number + " is a palindrome.");
+            return true;
+        } else {
+            System.out.println(number + " is not a palindrome.");
+            return false;
+        }
     }
 }
 
