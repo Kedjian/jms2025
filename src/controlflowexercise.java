@@ -52,6 +52,10 @@ public class controlflowexercise {
         isPalindrome(-212);
         isPalindrome(-56);
 
+        sumFirstAndLastDigit(515);
+        sumFirstAndLastDigit(212);
+        sumFirstAndLastDigit(56);
+
         int startNum = 5;
         int endNum = 20;
 
