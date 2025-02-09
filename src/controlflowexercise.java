@@ -58,6 +58,10 @@ public class controlflowexercise {
 
         getEvenDigitSum(123456789);
 
+        hasSharedDigit(12, 23);
+        hasSharedDigit(9, 99);
+        hasSharedDigit(15, 55);
+
         int startNum = 5;
         int endNum = 20;
 
@@ -291,6 +295,25 @@ public class controlflowexercise {
                 }
             } System.out.println(sum); return sum;
         } return -1;
+    }
+
+    public static boolean hasSharedDigit(int n1, int n2) {
+        boolean firstValid = (n1 > 9 && n1 < 100);
+        boolean secondValid = (n2 > 9 && n2 < 100);
+
+        if (!firstValid && !secondValid) {
+            return false;
+        }
+
+        int firstLeftDigit = n1 / 10;
+        int firstRightDigit = n1 % 10;
+        int secondLeftDigit = n2 / 10;
+        int secondRightDigit = n2 % 10;
+
+        boolean firstShared = firstLeftDigit == secondLeftDigit || firstLeftDigit == secondRightDigit;
+        boolean secondShared = firstRightDigit == secondRightDigit || firstRightDigit == secondLeftDigit;
+
+        return firstShared || secondShared;
     }
 }
 
