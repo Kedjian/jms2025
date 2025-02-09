@@ -59,8 +59,8 @@ public class controlflowexercise {
         getEvenDigitSum(123456789);
 
         hasSharedDigit(12, 23);
-        hasSharedDigit(9, 99);
-        hasSharedDigit(15, 55);
+
+        hasSameLastDigit(11, 22, 31);
 
         int startNum = 5;
         int endNum = 20;
@@ -314,6 +314,26 @@ public class controlflowexercise {
         boolean secondShared = firstRightDigit == secondRightDigit || firstRightDigit == secondLeftDigit;
 
         return firstShared || secondShared;
+    }
+
+    public static boolean isValid(int number) {
+        if (number >= 10 && number <= 1000)
+            return true;
+            else {
+                return false;
+        }
+    }
+
+    public static boolean hasSameLastDigit(int n1, int n2, int n3) {
+        if (!isValid(n1) || !isValid(n2) || !isValid(n3)) {
+            return false;
+        }
+
+        int lastN1 = n1 % 10;
+        int lastN2 = n2 % 10;
+        int lastN3 = n3 % 10;
+
+        return (lastN1 == lastN2) || (lastN1 == lastN3) || (lastN2 == lastN3);
     }
 }
 
