@@ -56,6 +56,8 @@ public class controlflowexercise {
         sumFirstAndLastDigit(212);
         sumFirstAndLastDigit(56);
 
+        getEvenDigitSum(123456789);
+
         int startNum = 5;
         int endNum = 20;
 
@@ -275,7 +277,19 @@ public class controlflowexercise {
             int lastDigit = number % 10;
             while (firstDigit >= 10) {
                 firstDigit /= 10;
-            } return firstDigit + lastDigit;
+            } System.out.println("Works."); return firstDigit + lastDigit;
+        } return -1;
+    }
+
+    public static int getEvenDigitSum(int number) {
+        int sum = 0;
+        if (number >= 0) {
+            for (int i = number; i > 0; i /= 10) {
+                int lastDigit = i % 10;
+                if (lastDigit % 2 == 0) {
+                    sum += lastDigit;
+                }
+            } System.out.println(sum); return sum;
         } return -1;
     }
 }
