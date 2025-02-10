@@ -26,7 +26,7 @@ public class controlflowexercise {
         printFactors(6);
         hasSameLastDigit(11, 22, 31);
         getGreatestCommonDivisor(25,15);
-        isPerfectNumber(6);
+        isPerfectMethod(6);
 
         int startNum = 5;
         int endNum = 20;
@@ -337,7 +337,7 @@ public class controlflowexercise {
         } return gcd;
     }
 
-    public static boolean isPerfectNumber(int num) {
+    public static boolean isPerfectMethod(int num) {
         if (num < 1) {
             return false;
         }
