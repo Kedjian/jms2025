@@ -15,52 +15,17 @@ public class controlflowexercise {
         System.out.println(getNatoEquivalent(natoCode));
 
         printDayOfWeek(0);
-        printDayOfWeek(1);
-        printDayOfWeek(2);
-        printDayOfWeek(3);
-        printDayOfWeek(4);
-        printDayOfWeek(5);
-        printDayOfWeek(6);
-
         printWeekDay(0);
-        printWeekDay(1);
-        printWeekDay(2);
-        printWeekDay(3);
-        printWeekDay(4);
-        printWeekDay(5);
-        printWeekDay(6);
-        printWeekDay(7);
-        printWeekDay(8);
-
         printNumberInWord(1);
-        printNumberInWord(2);
-        printNumberInWord(3);
-        printNumberInWord(9);
-        printNumberInWord(-10);
-
         sumOdd(1, 100);
-        sumOdd(-1, 100);
-        sumOdd(100, 100);
-        sumOdd(13,13);
-        sumOdd(100,-100);
-        sumOdd(100,1000);
-
         sumDigits(125);
-
-        isPalindrome(11);
         isPalindrome(121);
-        isPalindrome(-212);
-        isPalindrome(-56);
-
         sumFirstAndLastDigit(515);
-        sumFirstAndLastDigit(212);
-        sumFirstAndLastDigit(56);
-
         getEvenDigitSum(123456789);
-
         hasSharedDigit(12, 23);
-
+        printFactors(6);
         hasSameLastDigit(11, 22, 31);
+        getGreatestCommonDivisor(25,15);
 
         int startNum = 5;
         int endNum = 20;
@@ -293,7 +258,7 @@ public class controlflowexercise {
                 if (lastDigit % 2 == 0) {
                     sum += lastDigit;
                 }
-            } System.out.println(sum); return sum;
+            } return sum;
         } return -1;
     }
 
@@ -334,6 +299,41 @@ public class controlflowexercise {
         int lastN3 = n3 % 10;
 
         return (lastN1 == lastN2) || (lastN1 == lastN3) || (lastN2 == lastN3);
+    }
+
+    public static void printFactors(int n) {
+        if (n < 1) {
+            System.out.println("Invalid value.");
+        }
+
+        for (int i = 1; i <= n; i++) {
+            if (n % i == 0) {
+                System.out.println(i + " is a factor of " + n + ".");
+            }
+        }
+    }
+
+    public static int getGreatestCommonDivisor(int first, int second) {
+        if (first < 10 || second < 10) {
+            return -1;
+        }
+
+        int gcd = 0;
+        int smallerNum = 0;
+
+        if (first > second) {
+            smallerNum = second;
+        } else {
+            smallerNum = first;
+        }
+
+        for (int i = 1; i <= smallerNum; i++) {
+            for (int j = i; j <= smallerNum; j++) {
+                if (first % j == 0 && second % j == 0) {
+                    gcd = j;
+                }
+            }
+        } return gcd;
     }
 }
 
