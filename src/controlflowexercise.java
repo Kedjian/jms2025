@@ -27,6 +27,7 @@ public class controlflowexercise {
         hasSameLastDigit(11, 22, 31);
         getGreatestCommonDivisor(25,15);
         isPerfectMethod(6);
+        numberToWords(23);
 
         int startNum = 5;
         int endNum = 20;
@@ -352,6 +353,49 @@ public class controlflowexercise {
                 }
             }
         } return false;
+    }
+
+    public static void numberToWords(int num) {
+        for (int i = 1; num > 0; i++ ) {
+            int temp = num % 10;
+            int reverse = reverse(temp);
+            switch (reverse) {
+                case 0 -> System.out.print(" Zero ");
+                case 1 -> System.out.print(" One ");
+                case 2 -> System.out.print(" Two ");
+                case 3 -> System.out.print(" Three ");
+                case 4 -> System.out.print(" Four ");
+                case 5 -> System.out.print(" Five ");
+                case 6 -> System.out.print(" Six ");
+                case 7 -> System.out.print(" Seven ");
+                case 8 -> System.out.print(" Eight ");
+                case 9 -> System.out.print(" Nine ");
+            }
+            num = num / 10;
+        }
+        System.out.println();
+    }
+
+    public static int reverse(int num) {
+        int reverse = 0;
+        while (num != 0) {
+            reverse = reverse * 10 + num % 10;
+            num /= 10;
+        } return reverse;
+    }
+
+    public static int getDigitCount(int num) {
+        if (num < 0) {
+            return -1;
+        } else if (num == 0) {
+            return 1;
+        }
+
+        int count = 0;
+
+        for (int i = 1; i <= num; i *= 10) {
+            count++;
+        } return count;
     }
 }
 
