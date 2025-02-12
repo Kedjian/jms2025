@@ -24,9 +24,6 @@ public class methodsexercises {
         highScorePosition = calculateHighScorePosition(320);
         displayHighScorePosition("Elias", highScorePosition);
 
-        highScorePosition = calculateHighScorePosition(20);
-        displayHighScorePosition("Oskar", highScorePosition);
-
         checkNumber(5);
         printConversion(1.5);
         printMegaBytesAndKiloBytes(2500);
