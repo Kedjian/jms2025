@@ -28,84 +28,24 @@ public class methodsexercises {
         displayHighScorePosition("Oskar", highScorePosition);
 
         checkNumber(5);
-        checkNumber(-5);
-        checkNumber(0);
-
         printConversion(1.5);
-        printConversion(10.25);
-        printConversion(-0.75);
-
         printMegaBytesAndKiloBytes(2500);
-        printMegaBytesAndKiloBytes(-1024);
-
         shouldWakeUp(true, 1);
-        shouldWakeUp(false, 2);
-        shouldWakeUp(true, 8);
-        shouldWakeUp(true, -1);
-
         isLeapYear(-1600);
-        isLeapYear(1600);
-        isLeapYear(2017);
-
         areEqualByThreeDecimalPlaces(-3.1756, -3.175);
-        areEqualByThreeDecimalPlaces(3.175, 3.176);
-        areEqualByThreeDecimalPlaces(3.0, 3.0);
-        areEqualByThreeDecimalPlaces(-3.123, 3.123);
-
         hasEqualSum(1, 1, 1);
-        hasEqualSum(1, 1, 2);
-        hasEqualSum(1, -1, 0);
-        hasEqualSum(5, 5, 10);
-        hasEqualSum(3, 6, 15);
-
         hasTeen(9, 99, 19);
-        hasTeen(23,15,42);
-        hasTeen(22,23,24);
         isTeen(13);
-        isTeen(17);
-        isTeen(69);
-
         convertToCentimeters(5, 8);
-        convertToCentimeters(5, 10);
-        convertToCentimeters(67);
-        convertToCentimeters(23);
-
         getDurationString(7622);
-        getDurationString(212,62);
-
         area(5.0);
-        area(-1);
-        area(5.0, 4.0);
-        area(-1.0, 4.0);
-
         printYearsAndDays(525600);
-        printYearsAndDays(1051200);
-        printYearsAndDays(561600);
-
         printEqual(1, 1, 1);
-        printEqual(1, 1, 2);
-        printEqual(-1, -1, -1);
-        printEqual(1, 2,3);
-
         isCatPlaying(true, 10);
-        isCatPlaying(false, 36);
-        isCatPlaying(false, 35);
-
         isJohnSatisfied("Saturday", true, 1, 6);
-        isJohnSatisfied("Saturday", true, 1, 4);
-        isJohnSatisfied("Saturday", false, 1, 4);
-        isJohnSatisfied("Not a Saturday!", true, 3, 2);
-
         didBidufGraduate(true, true, false);
-        didBidufGraduate(false, true, false);
-        didBidufGraduate(true, false, false);
-        didBidufGraduate(true, true, true);
-
         isADividableOfB(6,2);
-        isADividableOfB(3,2);
-        isADividableOfB(4,2);
-        isADividableOfB(4,0);
-        isADividableOfB(0,4);
+
 
     }
     public static int calculateScore(boolean gameOver, int score, int levelCompleted, int bonus) {
