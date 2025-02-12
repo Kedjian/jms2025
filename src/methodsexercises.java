@@ -1,4 +1,4 @@
-public class methodsexercise {
+public class methodsexercises {
     public static void main(String[] args) {
 
         // Java's description of the method is: a declared executable code
