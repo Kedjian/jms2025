@@ -1,4 +1,4 @@
-public class controlflowexercise {
+public class controlflowexercises {
     public static void main(String[] args) {
         String month = "JANUARY";
         System.out.println(getQuarter(month));
