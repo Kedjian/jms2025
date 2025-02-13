@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 public class inputcalculator {
     public static void main(String[] args) {
-
         inputThenPrintSumAndAverage();
     }
 
