@@ -43,17 +43,21 @@ public class BankAccount {
         System.out.println("Phone Number: " + PhoneNumber);
     }
     public void DepositFunds(int amount) {
-        AccBalance += amount;
-        System.out.println("Your funds are now: " + getAccBalance() + ". You deposited: " + amount + ".");
+        if (amount > 0) {
+            AccBalance += amount;
+            System.out.println("Your funds are now: " + getAccBalance() + ". You deposited: " + amount + ".");
+        }
     }
     public void WithdrawFunds(int amount) {
-        if (amount > AccBalance) {
-            System.out.println("Insufficient Funds");
-            System.out.println("Amount left to deposit: " + getAccBalance());
-        } else {
-            AccBalance -= amount;
-            System.out.println("Deposit Successful");
-            System.out.println("Amount left to deposit: " + getAccBalance());
+        if (amount > 0) {
+            if (amount > AccBalance) {
+                System.out.println("Insufficient Funds");
+                System.out.println("Amount left to deposit: " + getAccBalance());
+            } else {
+                AccBalance -= amount;
+                System.out.println("Deposit Successful");
+                System.out.println("Amount left to deposit: " + getAccBalance());
+            }
         }
     }
 }

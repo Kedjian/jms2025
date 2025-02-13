@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 public class Main {
 
@@ -18,12 +19,22 @@ public class Main {
             String command = sc.nextLine();
             if (command.equals("1")) {
                 System.out.println("Enter amount to deposit: ");
-                int deposit = sc.nextInt();
+                int deposit = 0;
+                try {
+                   deposit = sc.nextInt();
+                } catch (InputMismatchException wrongData) {
+                    System.out.println("Please enter a valid number.");
+                }
                 sc.nextLine();
                 OsMak.DepositFunds(deposit);
             } else if (command.equals("2")) {
                 System.out.println("Enter amount to withdraw: ");
-                int withdraw = sc.nextInt();
+                int withdraw = 0;
+                try {
+                    withdraw = sc.nextInt();
+                } catch (InputMismatchException wrongData) {
+                    System.out.println("Please enter a valid number.");
+                }
                 sc.nextLine();
                 OsMak.WithdrawFunds(withdraw);
             } else {
