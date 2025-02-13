@@ -1,13 +1,34 @@
+import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-        Car car1 = new Car();
-        car1.setColor("Red");
-        car1.setMake("Burger");
-        car1.setModel("Samsung");
-        car1.setConvertible(false);
-        car1.setDoors(6);
-        car1.describeCar();
+        BankAccount OsMak = new BankAccount();
+        OsMak.setAccBalance(500);
+        OsMak.setAccNumber("5123 5821 4823 9581 2831 5823 5621 2134");
+        OsMak.setCustomerEmail("osma@gmail.com");
+        OsMak.setPhoneNumber("+48 572 434 741");
+        OsMak.setCustomerName("Oskar");
+
+        OsMak.describeBankAccount();
+
+        do {
+            System.out.println("What do you want to do? Print (1) to deposit. Print (2) to withdraw. ");
+            String command = sc.nextLine();
+            if (command.equals("1")) {
+                System.out.println("Enter amount to deposit: ");
+                int deposit = sc.nextInt();
+                sc.nextLine();
+                OsMak.DepositFunds(deposit);
+            } else if (command.equals("2")) {
+                System.out.println("Enter amount to withdraw: ");
+                int withdraw = sc.nextInt();
+                sc.nextLine();
+                OsMak.WithdrawFunds(withdraw);
+            } else {
+                System.out.println("Invalid command. Try again.");
+            }
+        } while (true);
     }
 }
