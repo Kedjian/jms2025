@@ -3,7 +3,22 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+        buchwaldTest();
+    }
 
+    public static void buchwaldTest() {
+        Person person = new Person();
+        person.setFirstName("");
+        person.setLastName("");
+        person.setAge(10);
+        System.out.println("Full name: " + person.getFullName());
+        System.out.println("Is teen? " + person.isTeen());
+        person.setFirstName("Caroline");
+        person.setAge(18);
+        System.out.println("Full name: " + person.getFullName());
+        System.out.println("Is teen? " + person.isTeen());
+        person.setLastName("Buchwald");
+        System.out.println("Full name: " + person.getFullName());
     }
 
     public static void calculatorTest() {
