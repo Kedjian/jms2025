@@ -8,13 +8,11 @@ public class SimpleCalculator {
     public double getSecondNumber() {
         return secondNumber;
     }
-    public double setFirstNumber(double firstNumber) {
+    public void setFirstNumber(double firstNumber) {
         this.firstNumber = firstNumber;
-        return firstNumber;
     }
-    public double setSecondNumber(double secondNumber) {
+    public void setSecondNumber(double secondNumber) {
         this.secondNumber = secondNumber;
-        return secondNumber;
     }
     public double getAdditionResult() {
         return firstNumber + secondNumber;
