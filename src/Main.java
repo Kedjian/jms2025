@@ -6,7 +6,23 @@ public class Main {
 
     }
 
-    public static void useBank() {
+    public static void calculatorTest() {
+        SimpleCalculator calculator = new SimpleCalculator();
+        calculator.setFirstNumber(5.0);
+        calculator.setSecondNumber(2.0);
+        System.out.println("add = " + calculator.getAdditionResult());
+        System.out.println("subtract = " + calculator.getSubtractionResult());
+        System.out.println("multiply = " + calculator.getMultiplicationResult());
+        System.out.println("divide = " + calculator.getDivisionResult());
+        calculator.setFirstNumber(9.25);
+        calculator.setSecondNumber(1.5);
+        System.out.println("add = " + calculator.getAdditionResult());
+        System.out.println("subtract = " + calculator.getSubtractionResult());
+        System.out.println("multiply = " + calculator.getMultiplicationResult());
+        System.out.println("divide = " + calculator.getDivisionResult());
+    }
+
+    public static void bankTest() {
         Scanner sc = new Scanner(System.in);
 
         BankAccount OsMak = new BankAccount();
