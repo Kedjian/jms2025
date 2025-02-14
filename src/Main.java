@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        buchwaldTest();
+        bankTest();
     }
 
     public static void buchwaldTest() {
@@ -40,14 +40,9 @@ public class Main {
     public static void bankTest() {
         Scanner sc = new Scanner(System.in);
 
-        BankAccount OsMak = new BankAccount();
-        OsMak.setAccBalance(500);
-        OsMak.setAccNumber("5123 5821 4823 9581 2831 5823 5621 2134");
-        OsMak.setCustomerEmail("osma@gmail.com");
-        OsMak.setPhoneNumber("+48 572 434 741");
-        OsMak.setCustomerName("Oskar");
-
-        OsMak.describeBankAccount();
+        BankAccount OsMak = new BankAccount("12345",
+                1000.00, "Bob Brown",
+                "myemail@bob.com", "(087) 123-4567");
 
         do {
             System.out.println("What do you want to do? Print (1) to deposit. Print (2) to withdraw. ");
