@@ -1,18 +1,26 @@
 public class BankAccount {
     private String AccNumber;
-    private int AccBalance;
+    private double AccBalance;
     private String CustomerName;
     private String CustomerEmail;
     private String PhoneNumber;
 
     public BankAccount() {
-        System.out.println("Bank Account Constructor");
+        this("56789", 2.5, "Default name", "Default email", "Default phone number");
+        System.out.println("Empty Bank Account Constructor called.");
+    }
+
+    public BankAccount(String customerName, String customerEmail, String phoneNumber) {
+        this("99999", 100.55, customerName, customerEmail, phoneNumber);
+//        CustomerName = customerName;
+//        CustomerEmail = customerEmail;
+//        PhoneNumber = phoneNumber;
     }
 
     public BankAccount(String AccNumber, double AccBalance, String CustomerName, String CustomerEmail, String PhoneNumber) {
-        System.out.println("Account constructor with parameters called");
+        System.out.println("Account constructor with parameters called.");
         this.AccNumber = AccNumber;
-        this.AccBalance = (int) AccBalance;
+        this.AccBalance = AccBalance;
         this.CustomerName = CustomerName;
         this.CustomerEmail = CustomerEmail;
         this.PhoneNumber = PhoneNumber;
@@ -21,7 +29,7 @@ public class BankAccount {
     public String getAccNumber() {
         return AccNumber;
     }
-    public int getAccBalance() {
+    public double getAccBalance() {
         return AccBalance;
     }
     public String getCustomerName() {
@@ -55,13 +63,13 @@ public class BankAccount {
         System.out.println("Customer Email: " + CustomerEmail);
         System.out.println("Phone Number: " + PhoneNumber);
     }
-    public void DepositFunds(int amount) {
+    public void DepositFunds(double amount) {
         if (amount > 0) {
             AccBalance += amount;
             System.out.println("Your funds are now: " + getAccBalance() + ". You deposited: " + amount + ".");
         }
     }
-    public void WithdrawFunds(int amount) {
+    public void WithdrawFunds(double amount) {
         if (amount > 0) {
             if (amount > AccBalance) {
                 System.out.println("Insufficient Funds");

@@ -3,7 +3,24 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        bankTest();
+        customerChrisTest();
+    }
+
+    public static void customerChrisTest() {
+        Customer Chris = new Customer("Chris", 1500, "Fishfuck22@gmail.com");
+        System.out.println(Chris.getName());
+        System.out.println(Chris.getEmail());
+        System.out.println(Chris.getCreditLimit());
+
+        Customer Chris1 = new Customer();
+        System.out.println(Chris1.getName());
+        System.out.println(Chris1.getEmail());
+        System.out.println(Chris1.getCreditLimit());
+
+        Customer Chris2 = new Customer("Chris", "Fishfuck22@gmail.com");
+        System.out.println(Chris2.getName());
+        System.out.println(Chris2.getEmail());
+        System.out.println(Chris2.getCreditLimit());
     }
 
     public static void buchwaldTest() {
@@ -40,18 +57,21 @@ public class Main {
     public static void bankTest() {
         Scanner sc = new Scanner(System.in);
 
-        BankAccount OsMak = new BankAccount("12345",
-                1000.00, "Bob Brown",
-                "myemail@bob.com", "(087) 123-4567");
+        BankAccount OsMak = new BankAccount("Chris-chan", "Chris-chan-desu@weebneet.com", "694201337");
+        OsMak.describeBankAccount();
+
+//        BankAccount OsMak = new BankAccount("12345",
+//                1000.00, "Bob Brown",
+//                "myemail@bob.com", "(087) 123-4567");
 
         do {
             System.out.println("What do you want to do? Print (1) to deposit. Print (2) to withdraw. ");
             String command = sc.nextLine();
             if (command.equals("1")) {
                 System.out.println("Enter amount to deposit: ");
-                int deposit = 0;
+                double deposit = 0;
                 try {
-                    deposit = sc.nextInt();
+                    deposit = sc.nextDouble();
                 } catch (InputMismatchException wrongData) {
                     System.out.println("Please enter a valid number.");
                 }
@@ -59,9 +79,9 @@ public class Main {
                 OsMak.DepositFunds(deposit);
             } else if (command.equals("2")) {
                 System.out.println("Enter amount to withdraw: ");
-                int withdraw = 0;
+                double withdraw = 0;
                 try {
-                    withdraw = sc.nextInt();
+                    withdraw = sc.nextDouble();
                 } catch (InputMismatchException wrongData) {
                     System.out.println("Please enter a valid number.");
                 }
