@@ -3,6 +3,10 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+
+    }
+
+    public static void useBank() {
         Scanner sc = new Scanner(System.in);
 
         BankAccount OsMak = new BankAccount();
@@ -21,7 +25,7 @@ public class Main {
                 System.out.println("Enter amount to deposit: ");
                 int deposit = 0;
                 try {
-                   deposit = sc.nextInt();
+                    deposit = sc.nextInt();
                 } catch (InputMismatchException wrongData) {
                     System.out.println("Please enter a valid number.");
                 }
