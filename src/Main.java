@@ -3,7 +3,23 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        studentTest();
+    }
+
+    public static void wallTest() {
+        Wall test = new Wall();
+        System.out.println(test.getArea());
+        System.out.println(test.getWidth());
+        System.out.println(test.getHeight());
+
+        Wall test1 = new Wall(5, 4);
+        System.out.println(test1.getArea());
+        System.out.println(test1.getWidth());
+        System.out.println(test1.getHeight());
+
+        Wall test2 = new Wall(-5, -10);
+        System.out.println(test2.getArea());
+        System.out.println(test2.getWidth());
+        System.out.println(test2.getHeight());
     }
 
     public static void studentTest() {
