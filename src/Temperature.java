@@ -1,4 +1,4 @@
-public class CelsiusToFahrenheit {
+public class Temperature {
     private double celsius;
     private double fahrenheit;
 

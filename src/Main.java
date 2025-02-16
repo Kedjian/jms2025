@@ -3,7 +3,11 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        CelsiusToFahrenheit celsius = new CelsiusToFahrenheit();
+
+    }
+
+    public static void temperatureTest() {
+        Temperature celsius = new Temperature();
         celsius.CTF(50, 54);
         celsius.describeCndF();
         celsius.convertCTF();
