@@ -3,7 +3,11 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        customerChrisTest();
+        CelsiusToFahrenheit celsius = new CelsiusToFahrenheit();
+        celsius.CTF(50, 54);
+        celsius.describeCndF();
+        celsius.convertCTF();
+        celsius.convertFTC();
     }
 
     public static void customerChrisTest() {
