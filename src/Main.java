@@ -6,6 +6,20 @@ public class Main {
 
     }
 
+    public static void complexNumbersTest() {
+        ComplexNumber one = new ComplexNumber(1.0, 1.0);
+        ComplexNumber number = new ComplexNumber(2.5, -1.5);
+        one.add(1,1);
+        System.out.println("one.real= " + one.getReal());
+        System.out.println("one.imaginary= " + one.getImag());
+        one.subtract(number);
+        System.out.println("one.real= " + one.getReal());
+        System.out.println("one.imaginary= " + one.getImag());
+        number.subtract(one);
+        System.out.println("number.real= " + number.getReal());
+        System.out.println("number.imaginary= " + number.getImag());
+    }
+
     public static void costCalculatorTest() {
         Carpet carpet = new Carpet(3.5);
         Floor floor = new Floor(2.75, 4.0);
