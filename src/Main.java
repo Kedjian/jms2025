@@ -3,14 +3,16 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
+    }
+
+    public static void trafficLightTest() {
         TrafficLight test = new TrafficLight("yellow", 5);
         test.describeTrafficLight();
 
         test.setColor("green");
         System.out.println(test.getColor());
     }
-
-
 
     public static void weatherStationTest() {
         WeatherStation canadaStation = new WeatherStation("Canada Weather Station",
