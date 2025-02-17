@@ -5,6 +5,7 @@ public class WeatherStation {
     private String windSpeed;
     private String windDirection;
     private String observation;
+    private int observationCount = 1;
 
     public WeatherStation(String stationName, String temperature, String humidity, String windSpeed, String windDirection, String observation) {
         this.stationName = stationName;
@@ -61,6 +62,7 @@ public class WeatherStation {
 
     public void setObservation(String observation) {
         this.observation = observation;
+        observationCount++;
     }
 
     @Override
@@ -72,6 +74,7 @@ public class WeatherStation {
                 ", windSpeed='" + windSpeed + '\'' +
                 ", windDirection='" + windDirection + '\'' +
                 ", observation='" + observation + '\'' +
+                ", observationCount=" + observationCount +
                 '}';
     }
 
@@ -82,5 +85,6 @@ public class WeatherStation {
         System.out.println("Wind Speed: " + windSpeed);
         System.out.println("Wind Direction: " + windDirection);
         System.out.println("Observation: " + observation);
+        System.out.println("ObservationCount: " + observationCount);
     }
 }

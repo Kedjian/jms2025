@@ -3,8 +3,14 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        weatherStationTest();
+        TrafficLight test = new TrafficLight("yellow", 5);
+        test.describeTrafficLight();
+
+        test.setColor("green");
+        System.out.println(test.getColor());
     }
+
+
 
     public static void weatherStationTest() {
         WeatherStation canadaStation = new WeatherStation("Canada Weather Station",
@@ -19,6 +25,11 @@ public class Main {
         canadaStation.setStationName("Canada Second Weather Station");
         canadaStation.setHumidity("62%");
         canadaStation.setTemperature("10.2 Celsius");
+        canadaStation.describeWeatherStation();
+
+        System.out.println(" ");
+
+        canadaStation.setObservation("Thunderstorms incoming");
         canadaStation.describeWeatherStation();
     }
 
