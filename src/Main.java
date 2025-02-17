@@ -3,7 +3,23 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        weatherStationTest();
+    }
 
+    public static void weatherStationTest() {
+        WeatherStation canadaStation = new WeatherStation("Canada Weather Station",
+                "23.7 Celsius", "96%", "3km/h",
+                "North", "Possible thunderstorms");
+
+        System.out.println(canadaStation);
+        canadaStation.describeWeatherStation();
+
+        System.out.println(" ");
+
+        canadaStation.setStationName("Canada Second Weather Station");
+        canadaStation.setHumidity("62%");
+        canadaStation.setTemperature("10.2 Celsius");
+        canadaStation.describeWeatherStation();
     }
 
     public static void complexNumbersTest() {
