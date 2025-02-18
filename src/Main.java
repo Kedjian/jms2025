@@ -11,6 +11,18 @@ public class Main {
 
         Cat cat = new Cat();
         doAnimalStuff(cat, "slow");
+
+        Dog yorkie = new Dog("Yorkie", 15);
+        doAnimalStuff(yorkie, "fast");
+
+        Dog retriever = new Dog("Labrador Retriever", 65, "Floppy", "Swimmer");
+        doAnimalStuff(retriever, "slow");
+
+        Dog wolf = new Dog("Wolf", 40);
+        doAnimalStuff(wolf, "slow");
+
+        Fish nemo = new Fish("Funny", "small", 5, 3, 4);
+        doAnimalStuff(nemo, "relatively fast");
     }
 
     public static void doAnimalStuff(Animal animal, String speed) {
