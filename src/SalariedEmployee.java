@@ -8,6 +8,17 @@ public class SalariedEmployee extends Employee {
         this.isRetired = isRetired;
     }
 
+    public double collectPay() {
+        if (isRetired) {
+            System.out.println(name + " is earning currently: " + (annualSalary - (annualSalary * 0.1)));
+            return annualSalary - (annualSalary * 0.1);
+        }
+        else {
+            System.out.println(name + " is earning currently: " + (annualSalary - (annualSalary * 0.3)));
+            return annualSalary - (annualSalary * 0.3);
+        }
+    }
+
     @Override
     public String toString() {
         return "SalariedEmployee{" +
@@ -17,6 +28,7 @@ public class SalariedEmployee extends Employee {
     }
 
     public boolean retire() {
+        terminate("12/12/2025");
         return isRetired = true;
     }
 }

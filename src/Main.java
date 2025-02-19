@@ -11,6 +11,9 @@ public class Main {
 
         SalariedEmployee worker2 = new SalariedEmployee("Anastacia", "01/02/2020", "11/11/1985", 58000, false);
         System.out.println(worker2);
+        worker2.collectPay();
+        worker2.retire();
+        worker2.collectPay();
     }
 
     public static void animalTest() {
