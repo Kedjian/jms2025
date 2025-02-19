@@ -3,6 +3,10 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        animalTest();
+    }
+
+    public static void animalTest() {
         Animal animal = new Animal("Generic Animal", "Huge", 400);
         doAnimalStuff(animal, "slow");
 
