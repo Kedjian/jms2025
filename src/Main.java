@@ -3,7 +3,11 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-
+        DnaVirus Poliovirus = new DnaVirus("ssRNA", "icosahedral",
+                "animals", "Group IV",
+                "fecal-oral transmission", "poliomyelitis",
+                "true", "false");
+        System.out.print(Poliovirus.toString());
     }
 
     public static void rectangleTest() {
