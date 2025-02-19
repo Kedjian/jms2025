@@ -3,6 +3,29 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
+    }
+
+    public static void stringFormattingTest() {
+        String bulletId = "Print a bulleted list:\n" +
+                "\t\u2022 First point\n" +
+                "\t\t\u2022 Sub point\n";
+
+        String textBlock = """
+               Print a bulleted list:
+               - first point: 
+               - sub point:
+                """;
+        System.out.println(textBlock);
+
+        int age = 35;
+        System.out.printf("You are %d years old.\n", age);
+
+        int yearOfBirth = 2025 - age;
+        System.out.printf("Birth year is %d.\n", yearOfBirth);
+    }
+
+    public static void workerTest() {
         Employee worker1 = new Employee("Caroline", "11/11/1985", "10/11/1985");
 
         System.out.println(worker1);
