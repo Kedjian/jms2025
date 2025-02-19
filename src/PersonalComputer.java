@@ -24,4 +24,13 @@ public class PersonalComputer extends Product {
     public Motherboard getMotherboard() {
         return motherboard;
     }
+
+    @Override
+    public String toString() {
+        return "PersonalComputer{" +
+                "computerCase=" + computerCase +
+                ", monitor=" + monitor +
+                ", motherboard=" + motherboard +
+                "} " + super.toString();
+    }
 }
