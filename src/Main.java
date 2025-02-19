@@ -3,7 +3,14 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        animalTest();
+        Employee worker1 = new Employee("Caroline", "11/11/1985", "10/11/1985");
+
+        System.out.println(worker1);
+
+        System.out.println("");
+
+        SalariedEmployee worker2 = new SalariedEmployee("Anastacia", "01/02/2020", "11/11/1985", 58000, false);
+        System.out.println(worker2);
     }
 
     public static void animalTest() {
