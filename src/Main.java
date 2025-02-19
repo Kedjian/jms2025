@@ -7,13 +7,18 @@ public class Main {
 
         System.out.println(worker1);
 
-        System.out.println("");
-
         SalariedEmployee worker2 = new SalariedEmployee("Anastacia", "01/02/2020", "11/11/1985", 58000, false);
         System.out.println(worker2);
+
         worker2.collectPay();
         worker2.retire();
         worker2.collectPay();
+
+        worker2.getAge();
+        worker1.getAge();
+
+        Employee worker3 = new Employee("Oscar", "05/08/2001", "08/04/2024");
+        System.out.println(worker3);
     }
 
     public static void animalTest() {

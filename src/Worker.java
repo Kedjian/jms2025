@@ -40,6 +40,7 @@ public class Worker {
         int currentYear = 2025;
         int birthYear = Integer.parseInt(birthDate.substring(6));
 
+        System.out.println(name + " is " + (currentYear - birthYear) + " years old.");
         return (currentYear - birthYear);
     }
 
