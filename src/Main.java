@@ -3,6 +3,10 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
+    }
+
+    public static void virusTest() {
         DnaVirus Poliovirus = new DnaVirus("ssRNA", "icosahedral",
                 "animals", "Group IV",
                 "fecal-oral transmission", "poliomyelitis",
