@@ -3,7 +3,12 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        Refrigerator iceBox = new Refrigerator();
+        DishWasher dishWasher = new DishWasher();
+        CoffeeMaker brewMaster = new CoffeeMaker();
 
+        SmartKitchen smartKitchen = new SmartKitchen(brewMaster, dishWasher, iceBox);
+        smartKitchen.brewCoffee();
     }
 
     public static void computerBuildTest() {
