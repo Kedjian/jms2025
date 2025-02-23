@@ -3,6 +3,24 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        Walls wall1 = new Walls("West");
+        Walls wall2 = new Walls("East");
+        Walls wall3 = new Walls("South");
+        Walls wall4 = new Walls("North");
+
+        Ceiling ceiling = new Ceiling(12, 55);
+
+        Bed bed = new Bed("Modern", 4, 3, 2, 1);
+
+        Lamp lamp = new Lamp("Classic", false, 75);
+
+        Bedroom bedRoom = new Bedroom("Oscar", wall1, wall2, wall3, wall4, ceiling,bed, lamp);
+        bedRoom.makeBed();
+
+        bedRoom.getLamp().turnOn();
+    }
+
+    public static void smartKitchenTest() {
         Refrigerator iceBox = new Refrigerator();
         DishWasher dishWasher = new DishWasher();
         CoffeeMaker brewMaster = new CoffeeMaker();
