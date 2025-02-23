@@ -8,7 +8,8 @@ public class Main {
         CoffeeMaker brewMaster = new CoffeeMaker();
 
         SmartKitchen smartKitchen = new SmartKitchen(brewMaster, dishWasher, iceBox);
-        smartKitchen.brewCoffee();
+        smartKitchen.setKitchenState(true, false, true);
+        smartKitchen.doKitchenWork();
     }
 
     public static void computerBuildTest() {

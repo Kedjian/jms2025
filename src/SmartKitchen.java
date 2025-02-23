@@ -6,6 +6,7 @@ public class SmartKitchen {
     private Refrigerator iceBox;
 
     public SmartKitchen() {}
+
     public SmartKitchen(CoffeeMaker brewMaster, DishWasher dishWasher, Refrigerator iceBox) {
         this.brewMaster = brewMaster;
         this.dishWasher = dishWasher;
@@ -21,6 +22,8 @@ public class SmartKitchen {
     public void brewCoffee() {
         getBrewMaster().brewCoffee();
     }
+    public void doDishes() {getDishWasher().doDishes();}
+    public void orderFood() {getIceBox().orderFood();}
 
     public boolean addWater() {
         return getBrewMaster().hasWorkToDo = true;
@@ -38,6 +41,18 @@ public class SmartKitchen {
         getBrewMaster().hasWorkToDo = brewMasterState;
         getDishWasher().hasWorkToDo = dishWasherState;
         getIceBox().hasWorkToDo = iceBoxState;
+    }
+
+    public void doKitchenWork() {
+        if (getBrewMaster().hasWorkToDo) {
+            brewCoffee();
+        }
+        if (getDishWasher().hasWorkToDo) {
+            doDishes();
+        }
+        if (getIceBox().hasWorkToDo) {
+            orderFood();
+        }
     }
 }
 
