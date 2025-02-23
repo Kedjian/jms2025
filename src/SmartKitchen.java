@@ -15,14 +15,34 @@ public class SmartKitchen {
     private CoffeeMaker getBrewMaster() {
         return brewMaster;
     }
+    private DishWasher getDishWasher() { return dishWasher; }
+    private Refrigerator getIceBox() { return iceBox; }
 
     public void brewCoffee() {
         getBrewMaster().brewCoffee();
     }
+
+    public boolean addWater() {
+        return getBrewMaster().hasWorkToDo = true;
+    }
+
+    public boolean pourMilk() {
+        return getIceBox().hasWorkToDo = true;
+    }
+
+    public boolean loadDishwasher() {
+        return getDishWasher().hasWorkToDo = true;
+    }
+
+    public void setKitchenState(boolean brewMasterState, boolean dishWasherState, boolean iceBoxState) {
+        getBrewMaster().hasWorkToDo = brewMasterState;
+        getDishWasher().hasWorkToDo = dishWasherState;
+        getIceBox().hasWorkToDo = iceBoxState;
+    }
 }
 
 class Refrigerator extends SmartKitchen {
-    private boolean hasWorkToDo;
+    protected boolean hasWorkToDo = false;
 
     public Refrigerator() {}
 
@@ -32,7 +52,7 @@ class Refrigerator extends SmartKitchen {
 }
 
 class DishWasher extends SmartKitchen {
-    private boolean hasWorkToDo;
+    protected boolean hasWorkToDo = false;
 
     public DishWasher() {}
 
@@ -42,7 +62,7 @@ class DishWasher extends SmartKitchen {
 }
 
 class CoffeeMaker extends SmartKitchen {
-    private boolean hasWorkToDo;
+    protected boolean hasWorkToDo = false;
 
     public CoffeeMaker() {}
 
