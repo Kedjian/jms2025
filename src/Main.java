@@ -3,7 +3,20 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+//        Player player = new Player();
+//        player.fullName = "Tim";
+//        player.health = 20;
+//        player.weapon = "Sword";
+//
+//        int damage = 10;
+//        player.loseHealth(damage);
+//        System.out.println(player.healthRemaining());
+//
+//        player.loseHealth(11);
+//        System.out.println(player.healthRemaining());
 
+        EnhancedPlayer Oskar = new EnhancedPlayer("Oskar");
+        System.out.println("Initial health is " + Oskar.healthRemaining());
     }
 
     public static void bedRoomTest() {
