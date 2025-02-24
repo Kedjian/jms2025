@@ -3,6 +3,10 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
+    }
+
+    public static void bedRoomTest() {
         Walls wall1 = new Walls("West");
         Walls wall2 = new Walls("East");
         Walls wall3 = new Walls("South");
