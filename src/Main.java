@@ -6,6 +6,14 @@ public class Main {
 
     }
 
+    public static void printerTest() {
+        Printer printer = new Printer(50, true);
+        System.out.println("Initial page count = " + printer.getPagesPrinted());
+
+        int pagesPrinted = printer.printPages(5);
+        System.out.println("Printed pages = " + printer.getPagesPrinted());
+    }
+
     public static  void playerTest() {
         EnhancedPlayer Oskar = new EnhancedPlayer("Oskar");
         System.out.println("Initial health is " + Oskar.healthRemaining());
