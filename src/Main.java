@@ -3,7 +3,8 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-
+        Movie theMovie = new ScienceFiction("Lord of The Rings");
+        theMovie.watchMovie();
     }
 
     public static void printerTest() {
