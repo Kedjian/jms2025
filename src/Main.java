@@ -1,14 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        billBurgerTest();
-    }
 
-    public static void billBurgerTest() {
-        BillBurger newBurger = new BillBurger();
-        System.out.println(newBurger);
-
-        BillBurger oldBurger = new BillBurger("Unregular burger", "Unregular drink", "Unregular side item.");
-        System.out.println(oldBurger);
     }
 
     public static void carTest() {
@@ -18,7 +10,7 @@ public class Main {
         car.brake();
 
         Mitsubishi mitsubishi = new Mitsubishi(6, "Outlander VRX 4WD");
-        mitsubishi.startEngine();
+        mitsubishi.startEngine() ;
         mitsubishi.accelerate();
         mitsubishi.brake();
 
