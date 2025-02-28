@@ -1,8 +1,17 @@
 public class Main {
     public static void main(String[] args) {
+        billBurgerTest();
     }
 
-    public void carTest() {
+    public static void billBurgerTest() {
+        BillBurger newBurger = new BillBurger();
+        System.out.println(newBurger);
+
+        BillBurger oldBurger = new BillBurger("Unregular burger", "Unregular drink", "Unregular side item.");
+        System.out.println(oldBurger);
+    }
+
+    public static void carTest() {
         Car car = new Car(8, "Base car");
         car.startEngine();
         car.accelerate();
