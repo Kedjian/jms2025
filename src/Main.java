@@ -1,6 +1,14 @@
 public class Main {
     public static void main(String[] args) {
+        kodlandTest();
+    }
 
+    public static void kodlandTest() {
+        Worker OM = new Worker("Oskar", "Makowski",
+                "Teacher of Python and Lua", 9,
+                2);
+        System.out.println(OM);
+        OM.calculateSalary("March");
     }
 
     public static void carTest() {
