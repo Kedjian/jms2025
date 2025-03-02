@@ -7,8 +7,10 @@ public class Main {
         Worker OM = new Worker("Oskar", "Makowski",
                 "Teacher of Python and Lua", 9,
                 2);
-        System.out.println(OM);
         OM.calculateSalary("March");
+        OM.setQualityParameters(9,29.0,
+                53.0, 93.0, 91.0);
+        OM.calculateWorkQuality();
     }
 
     public static void carTest() {
