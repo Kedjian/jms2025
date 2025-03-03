@@ -1,63 +1,72 @@
 public class Car {
+    private boolean engine = true;
+    private int cylinders;
+    private String name;
+    private int wheels = 4;
 
-    private String make;
-    private String model;
-    private String color;
-    private int doors;
-    private boolean convertible;
-
-    public String getMake() {
-        return make;
+    public Car(int cylinders, String name) {
+        this.cylinders = cylinders;
+        this.name = name;
     }
-
-    public boolean isConvertible() {
-        return convertible;
+    public void startEngine() {
+        System.out.println("Car -> engine started.");
     }
-
-    public int getDoors() {
-        return doors;
+    public void accelerate() {
+        System.out.println("Car -> accelerates.");
     }
-
-    public String getColor() {
-        return color;
+    public void brake() {
+        System.out.println("Car -> brakes.");
     }
-
-    public String getModel() {
-        return model;
+    public int getCylinders() {
+        return cylinders;
     }
-
-    public void setMake(String make) {
-        if (make == null) make = "Unknown";
-        String lowercaseMake = make.toLowerCase();
-        switch (lowercaseMake) {
-            case "holden", "porsche", "tesla" -> this.make = make;
-            default -> {
-                this.make = "Unsupported";
-            }
-        }
-    }
-
-    public void setModel(String model) {
-        this.model = model;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public void setDoors(int doors) {
-        this.doors = doors;
-    }
-
-    public void setConvertible(boolean convertible) {
-        this.convertible = convertible;
-    }
-
-    public void describeCar() {
-        System.out.println("Make: " + make);
-        System.out.println("Model: " + model);
-        System.out.println("Color: " + color);
-        System.out.println("Doors: " + doors);
-        System.out.println(convertible ? "Convertible" : "Not convertible");
+    public String getName() {
+        return name;
     }
 }
+
+class Mitsubishi extends Car {
+    public Mitsubishi(int cylinders, String name) {
+        super(cylinders, name);
+    }
+    public void startEngine() {
+        System.out.println("Mitsubishi -> engine started.");
+    }
+    public void accelerate() {
+        System.out.println("Mitsubishi -> accelerates.");
+    }
+    public void brake() {
+        System.out.println("Mitsubishi -> brakes.");
+    }
+}
+
+class Holden extends Car {
+    public Holden(int cylinders, String name) {
+        super(cylinders, name);
+    }
+    public void startEngine() {
+        System.out.println("Holden -> engine started.");
+    }
+    public void accelerate() {
+        System.out.println("Holden -> accelerates.");
+    }
+    public void brake() {
+        System.out.println("Holden -> brakes.");
+    }
+}
+
+class Ford extends Car {
+    public Ford(int cylinders, String name) {
+        super(cylinders, name);
+    }
+    public void startEngine() {
+        System.out.println("Ford -> engine started.");
+    }
+    public void accelerate() {
+        System.out.println("Ford -> accelerates.");
+    }
+    public void brake() {
+        System.out.println("Ford -> brakes.");
+    }
+}
+

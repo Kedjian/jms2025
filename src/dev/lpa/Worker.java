@@ -1,3 +1,5 @@
+package dev.lpa;
+
 public class Worker {
     protected String firstName;
     protected String lastName;
@@ -28,7 +30,7 @@ public class Worker {
 
     @Override
     public String toString() {
-        return "Worker{" +
+        return "dev.lpa.Worker{" +
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", position='" + position + '\'' +

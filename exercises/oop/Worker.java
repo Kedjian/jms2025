@@ -54,7 +54,7 @@ public class Worker {
 
     @Override
     public String toString() {
-        return "Worker{" +
+        return "dev.lpa.Worker{" +
                 "name='" + name + '\'' +
                 ", birthDate='" + birthDate + '\'' +
                 '}';
