@@ -4,11 +4,7 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-        int[] unsortedArray = getRandomArray(5);
-        System.out.println(Arrays.toString(unsortedArray));
-
-        int[] sortedArray = sortIntegers(unsortedArray);
-        System.out.println(Arrays.toString(sortedArray));
+        kodlandTest();
     }
 
     private static int[] sortIntegers(int[] array) {
@@ -128,7 +124,7 @@ public class Main {
 
     public static void kodlandTest() {
         Worker OM = new Worker("Oskar", "Makowski",
-                "Teacher of Python and Lua", 9,
+                "Teacher of Python and Lua", 12,
                 2);
         System.out.println(OM);
         OM.calculateSalary("March");
