@@ -4,7 +4,21 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-        kodlandTest();
+
+    }
+
+    private static void arrayRecap() {
+        int[] array = new int[5]; //array has n elements, and is indexed from 0. the last index is equivalent to n-1.
+        int[] myArray = {10, 35, 20, 17, 18}; //array has  5 elements. myArray[0] is equal to 10. myArray[1] is equal to 35.
+
+        //ArrayIndexOutOfBoundsException means that we asked for an index that DOES NOT exist.
+        //a good example would be myArray[5]. it has only five elements, so by the logic of the last index being
+        //(n-1), the last index is 4. asking for 5th doesn't work.
+
+        //to go through arrays with loops, we shouldn't set i to 1. if we do so, they will skip the first index.
+        //to go through arrays with loops, we should be mindful of how many times the loop iterates.
+
+        //generally, most of the problems regarding loops come from wrong index usages. enhanced for loops should be used.
     }
 
     private static int[] sortIntegers(int[] array) {
