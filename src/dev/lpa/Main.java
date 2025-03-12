@@ -5,6 +5,17 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String... args) {
+        printGrid();
+    }
+
+    private static void printGrid() {
+        String[] arr = {" _ ".repeat(10)};
+        for (int i = 0; i < 10; i++) {
+            System.out.println(Arrays.toString(arr));
+        }
+    }
+
+    private static void summedIntegersOfAnArray() {
         int[] arr = {1337, 69, 2137, 420};
         System.out.println(sumIntegersOfAnArray(arr));
     }
