@@ -5,7 +5,27 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String... args) {
+        int i = readInteger();
+        int [] arr = readElements(i);
+        findMin(arr);
+    }
 
+    private static int readInteger() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter an integer: ");
+        return sc.nextInt();
+    }
+
+    private static int[] readElements(int i) {
+        Scanner sc = new Scanner(System.in);
+        int[] arr = new int[i];
+        for (int a = 0; a < i; a++) {
+            System.out.println("Enter element " + a + ": ");
+            arr[a] = sc.nextInt();
+        } return arr;
+    }
+
+    private static void arrayStudies1() {
         int[] returnedArray = readIntegers();
         System.out.println(Arrays.toString(returnedArray));
 
@@ -35,6 +55,7 @@ public class Main {
                 min = el;
             }
         }
+        System.out.println("Min: " + min);
         return min;
     }
 
