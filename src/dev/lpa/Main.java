@@ -5,7 +5,18 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String... args) {
-        printGrid();
+        int[] arr = {1, 3, 5, 10, 12};
+        System.out.println(averageOfAnArray(arr));
+
+        int[] arr2 = {69, 2137, 1337, 420};
+        System.out.println(averageOfAnArray(arr2));
+    }
+
+    private static double averageOfAnArray(int[] array) {
+        int sum = 0;
+        for (int i = 0; i < array.length; i++) {
+            sum += array[i];
+        } return (double) sum / array.length;
     }
 
     private static void printGrid() {
