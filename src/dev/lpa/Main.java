@@ -5,6 +5,25 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String... args) {
+        int[] arr = {1, 2, 3, 4, 5};
+        System.out.println(Arrays.toString(arr));
+        reverse(arr);
+        System.out.println(Arrays.toString(arr));
+    }
+
+    private static void reverse(int[] array) {
+
+        System.out.println("Array = " + Arrays.toString(array));
+        int maxIndex = array.length - 1;
+        int halfLength = array.length / 2;
+        for (int i = 0; i < halfLength; i++) {
+            int temp = array[i];                    // 1
+            array[i] = array[maxIndex - i];         // 2
+            array[maxIndex - i] = temp;             // 3
+        }
+    }
+
+    private static void dynamicArrayAllocation() {
         int i = readInteger();
         int [] arr = readElements(i);
         findMin(arr);
