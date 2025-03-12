@@ -5,6 +5,18 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String... args) {
+        int[] arr = {1337, 69, 2137, 420};
+        System.out.println(sumIntegersOfAnArray(arr));
+    }
+
+    private static int sumIntegersOfAnArray(int[] arr) {
+        int sum = 0;
+        for (int i = 0; i < arr.length - 1; i++) {
+            sum += arr[i];
+        } return sum;
+    }
+
+    private static void testingArrayStuff() {
         int[] arr = {1, 2, 3, 4, 5};
         System.out.println(Arrays.toString(arr));
         reverse(arr);
