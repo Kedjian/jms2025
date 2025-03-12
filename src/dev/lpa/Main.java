@@ -5,6 +5,33 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String... args) {
+        int[] arr = {3, 4, 5, 6, 7, 8};
+        int num = 4;
+        checkIfArrayContains(arr, num);
+
+        String[] text = {"Adam", "Eve", "Josh"};
+        String value = "Josh";
+        checkIfArrayContains(text, value);
+    }
+
+    private static void checkIfArrayContains(int[] array, int value) {
+        for (int i : array) {
+            if (i == value) {
+                System.out.println(i + " fits to " + value + ".");
+                return;
+            }
+        }
+    }
+
+    private static void checkIfArrayContains(String[] array, String value) {
+        for (int i = 0; i < array.length; i++) {
+            if (array[i].equals(value)) {
+                System.out.println("Index " + i + " fits to " + value + ".");
+            }
+        }
+    }
+
+    private static void averageOfAnArrayTest() {
         int[] arr = {1, 3, 5, 10, 12};
         System.out.println(averageOfAnArray(arr));
 
