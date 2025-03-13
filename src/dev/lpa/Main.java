@@ -5,6 +5,23 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String... args) {
+
+    }
+
+    private static void testFindIndex() {
+        int[] arr = {5, 2, 3, 4, 2, 1, 3};
+        findIndex(arr, 5);
+    }
+
+    private static void findIndex(int[] arr, int element) {
+        for (int i : arr) {
+            if (arr[i - 1] == element) {
+                System.out.println(i);
+            }
+        }
+    }
+
+    private static void testCheckIfs() {
         int[] arr = {3, 4, 5, 6, 7, 8};
         int num = 4;
         checkIfArrayContains(arr, num);
