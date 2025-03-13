@@ -8,6 +8,26 @@ public class Main {
 
     }
 
+    private static void deleteAnArrayElementTest() {
+        int[] arr1  = {1, 2, 3, 5, 4};
+        int[] arr2 = deleteAnArrayElement(arr1, 5);
+        int[] arr3 = deleteAnArrayElement(arr2, 2);
+        int[] arr4 = deleteAnArrayElement(arr3, 1);
+        int[] arr5 = deleteAnArrayElement(arr4, 3);
+        System.out.println(Arrays.toString(arr5));
+    }
+
+    private static int[] deleteAnArrayElement(int[] arr, int element) {
+        int[] newArr = new int[arr.length - 1];
+        int newIndex = 0;
+        for (int j : arr) {
+            if (j != element) {
+                newArr[newIndex++] = j;
+            }
+        }
+        return newArr;
+    }
+
     private static void testFindIndex() {
         int[] arr = {5, 2, 3, 4, 2, 1, 3};
         findIndex(arr, 5);
