@@ -8,6 +8,19 @@ public class Main {
 
     }
 
+    private static void copyAnArrayByIterationTest() {
+        int[] arr1 = {1, 2, 3};
+        int[] arr2 = copyAnArrayByIteration(arr1);
+        System.out.println(Arrays.toString(arr2));
+    }
+
+    private static int[] copyAnArrayByIteration(int[] arr) {
+        int[] iteratedArray = new int[arr.length];
+        for (int i : arr) {
+            iteratedArray[i - 1] = arr[i - 1];
+            } return iteratedArray;
+        }
+
     private static void deleteAnArrayElementTest() {
         int[] arr1  = {1, 2, 3, 5, 4};
         int[] arr2 = deleteAnArrayElement(arr1, 5);
