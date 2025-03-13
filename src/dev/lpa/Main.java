@@ -8,6 +8,19 @@ public class Main {
 
     }
 
+    private static void findMinAndMaxTest() {
+        int[] arr1 = {1, 3, 6, 8, 10, 12, 14, 16, 18, 69, 2137, 420};
+        findMinAndMax(arr1);
+    }
+
+    private static void findMinAndMax(int[] arr) {
+        Arrays.sort(arr);
+        int min = arr[0];
+        int max = arr[arr.length - 1];
+        System.out.println("Min: " + min + ".");
+        System.out.println("Max: " + max + ".");
+    }
+
     private static void insertAnElementAtAnIndexTest() {
         int[] arr1 = {1, 2, 3};
         int[] arr2 = insertAnElementAtAnIndex(arr1, 0, 5);
