@@ -8,6 +8,23 @@ public class Main {
 
     }
 
+    private static void insertAnElementAtAnIndexTest() {
+        int[] arr1 = {1, 2, 3};
+        int[] arr2 = insertAnElementAtAnIndex(arr1, 0, 5);
+        System.out.println(Arrays.toString(arr2));
+    }
+
+    private static int[] insertAnElementAtAnIndex(int[] arr, int index, int element) {
+        int[] newArr = new int[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            if (i == index) {
+                newArr[i] = element;
+            } else {
+                newArr[i] = arr[i];
+            }
+        } return newArr;
+    }
+
     private static void copyAnArrayByIterationTest() {
         int[] arr1 = {1, 2, 3};
         int[] arr2 = copyAnArrayByIteration(arr1);
