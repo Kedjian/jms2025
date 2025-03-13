@@ -8,6 +8,21 @@ public class Main {
 
     }
 
+    private static void findDuplicatesTest() {
+        int[] arr = {1, 2, 2, 3, 4};
+        findDuplicates(arr);
+    }
+
+    private static void findDuplicates(int[] arr) {
+        for (int i = 0; i < arr.length-1; i++) {
+            for (int j = i+1; j < arr.length; j++) {
+                if ((arr[i] == (arr[j])) && (i != j)) {
+                    System.out.println(arr[j]);
+                }
+            }
+        }
+    }
+
     private static void findMinAndMaxTest() {
         int[] arr1 = {1, 3, 6, 8, 10, 12, 14, 16, 18, 69, 2137, 420};
         findMinAndMax(arr1);
