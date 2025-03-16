@@ -33,7 +33,7 @@ public class InteractiveList {
 
     private static void displayInfo() {
         String textBlock = """
-                <><><><><><><><><><><><><><><><><><><><><><>
+                
                 Interactive list programme.
                 
                 Choose 0 to add something to your list.
