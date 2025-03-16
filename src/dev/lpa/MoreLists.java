@@ -1,5 +1,6 @@
 package dev.lpa;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MoreLists {
@@ -10,6 +11,15 @@ public class MoreLists {
         List<String> list = List.of(items);
         System.out.println(list);
 
-        System.out.println(list.getClass().getName());
+        ArrayList<String> groceries = new ArrayList<>(list);
+        groceries.add("yogurt");
+        System.out.println(groceries);
+
+        ArrayList<String> nextList = new ArrayList<>(
+                List.of("apples", "bananas", "milk", "eggs"));
+        System.out.println(nextList);
+
+        groceries.addAll(nextList);
+        System.out.println(groceries);
     }
 }

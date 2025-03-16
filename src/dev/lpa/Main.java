@@ -15,6 +15,8 @@ record GroceryItem(String name, String type, int count) {
 
 public class Main {
     public static void main(String[] args) {
+
+
 //        GroceryItem[] groceryArray = new GroceryItem[3];
 //        groceryArray[0] = new GroceryItem("Milk");
 //        groceryArray[1] = new GroceryItem("Bread", "Produce", 6);
@@ -33,5 +35,9 @@ public class Main {
                 new GroceryItem("Apples", "PRODUCE", 6));
         groceryList.remove(1);
         System.out.println(groceryList);
+    }
+
+    public static void sayHelloToThePersonSeeingThis(String Name) {
+        System.out.println("Hello " + Name + "!");
     }
 }
