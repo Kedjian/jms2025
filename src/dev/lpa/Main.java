@@ -16,7 +16,6 @@ record GroceryItem(String name, String type, int count) {
 public class Main {
     public static void main(String[] args) {
 
-
 //        GroceryItem[] groceryArray = new GroceryItem[3];
 //        groceryArray[0] = new GroceryItem("Milk");
 //        groceryArray[1] = new GroceryItem("Bread", "Produce", 6);
@@ -27,14 +26,14 @@ public class Main {
 //        objectList.add(new GroceryItem("Butter"));
 //        objectList.add("Yogurt");
 
-        ArrayList<GroceryItem> groceryList = new ArrayList<>();
-        groceryList.add(new GroceryItem("Butter"));
-        groceryList.add(new GroceryItem("Yogurt"));
-        groceryList.add(new GroceryItem("Milk", "PRODUCE", 5));
-        groceryList.set(0,
-                new GroceryItem("Apples", "PRODUCE", 6));
-        groceryList.remove(1);
-        System.out.println(groceryList);
+//        ArrayList<GroceryItem> groceryList = new ArrayList<>();
+//        groceryList.add(new GroceryItem("Butter"));
+//        groceryList.add(new GroceryItem("Yogurt"));
+//        groceryList.add(new GroceryItem("Milk", "PRODUCE", 5));
+//        groceryList.set(0,
+//                new GroceryItem("Apples", "PRODUCE", 6));
+//        groceryList.remove(1);
+//        System.out.println(groceryList);
     }
 
     public static void sayHelloToThePersonSeeingThis(String Name) {
