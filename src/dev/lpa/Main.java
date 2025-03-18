@@ -15,6 +15,18 @@ record GroceryItem(String name, String type, int count) {
 
 public class Main {
     public static void main(String[] args) {
+        Contact Sarah = new Contact("Sarah", "742832132");
+        Contact Bob = new Contact("Bob", "678921322");
+        Contact Roksana = new Contact("Roksana", "678921322");
+
+        MobilePhone Oskar = new MobilePhone("572434744");
+        Oskar.addNewContact(Sarah);
+        Oskar.addNewContact(Bob);
+        Oskar.printContacts();
+
+        MobilePhone Ref = new MobilePhone("521423224");
+        Ref.addNewContact(Roksana);
+        Ref.printContacts();
 
 //        GroceryItem[] groceryArray = new GroceryItem[3];
 //        groceryArray[0] = new GroceryItem("Milk");
