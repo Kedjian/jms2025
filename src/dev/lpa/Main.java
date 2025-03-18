@@ -15,7 +15,23 @@ record GroceryItem(String name, String type, int count) {
 
 public class Main {
     public static void main(String[] args) {
+        int[] array = {1, 2, 3, 4, 6, 7, -1, 8, 0};
+        checkIf(array);
+    }
 
+    public static void checkIf(int[] array) {
+        for (int j : array) {
+            if (j == 0) {
+                System.out.println("INCORRECT INPUT");
+                System.out.println(j);
+            } else if (j == -1) {
+                System.out.println("INCORRECT INPUT");
+                System.out.println(j);
+            } else {
+                System.out.println("CORRECT INPUT");
+                System.out.println(j);
+            }
+        }
     }
 
     public static void arrayEqualityTest() {
