@@ -10,12 +10,11 @@ public class MobilePhone {
         this.myContacts = new ArrayList<>();
     }
 
-    public boolean addNewContact(Contact contact) {
+    public void addNewContact(Contact contact) {
         if (myContacts.contains(contact)) {
-            return false;
+            System.out.println("Contact is already in the list");
         } else {
             myContacts.add(contact);
-            return true;
         }
     }
 
