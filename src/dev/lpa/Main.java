@@ -18,6 +18,18 @@ public class Main {
 
     }
 
+    public static void arrayEqualityTest() {
+        String[] myArray = {"1", "2", "3", "4", "5", "6"};
+        ArrayList<String> firstArray = new ArrayList(Arrays.asList(myArray));
+        String[] mySecondArray = {"1", "2", "3", "4", "5", "6"};
+        ArrayList<String> secondArray = new ArrayList(Arrays.asList(mySecondArray));
+        if (firstArray.equals(secondArray)) {
+            System.out.println("First array equals second array.");
+        } else {
+            System.out.println("Second array does not equal first array.");
+        }
+    }
+
     public static void arrayListToAnArrayAndArrayToAnArrayList() {
         String[] my_array = new String[] { "A", "B", "C", "D", "E", "F", "G" };
         ArrayList list = new ArrayList(Arrays.asList(my_array));
