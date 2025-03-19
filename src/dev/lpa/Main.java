@@ -19,6 +19,19 @@ public class Main {
 
     }
 
+    public static void updateAnArrayTest() {
+        ArrayList<String> list = new ArrayList<>();
+        list.add("Meow");
+        list.add("Brown");
+        list.add("Chocolate");
+        updateAnArray(list, 0, "Not-meow");
+    }
+
+    public static void updateAnArray(ArrayList<String> array, int index, String data) {
+        array.set(index, data);
+        System.out.println(array);
+    }
+
     public static void elementInsertTest() {
         ArrayList<String> list = new ArrayList<String>();
         list.add("A");
