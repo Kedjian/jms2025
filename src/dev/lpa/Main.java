@@ -19,6 +19,23 @@ public class Main {
 
     }
 
+    public static void searchForAnElementTest() {
+        ArrayList<Integer> list = new ArrayList<>();
+        list.addAll(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+        System.out.println(list);
+        searchForAnElement(list, 5);
+    }
+
+    public static void searchForAnElement(ArrayList<Integer> list, int data) {
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i) == data) {
+                System.out.println("Element found: ");
+                System.out.println(list.get(i));
+                System.out.println("At index: " + list.indexOf(list.get(i)) + ".");
+            }
+        }
+    }
+
     public static void deleteThirdElement() {
         ArrayList<String> list = new ArrayList<>();
         list.add("A");
