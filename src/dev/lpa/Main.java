@@ -1,6 +1,7 @@
 package dev.lpa;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.LinkedList;
 
 record GroceryItem(String name, String type, int count) {
@@ -17,6 +18,15 @@ record GroceryItem(String name, String type, int count) {
 public class Main {
     public static void main(String[] args) {
 
+    }
+
+    public static void collectionShuffle() {
+        ArrayList<String> list = new ArrayList<>();
+        list.add("A");
+        list.add("B");
+        list.add("C");
+        Collections.shuffle(list);
+        System.out.println(list);
     }
 
     public static void searchForAnElementTest() {
