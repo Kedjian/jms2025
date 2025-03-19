@@ -1,8 +1,5 @@
 package dev.lpa;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.LinkedList;
+import java.util.*;
 
 record GroceryItem(String name, String type, int count) {
     public GroceryItem(String name) {
@@ -20,6 +17,18 @@ public class Main {
 
     }
 
+    public static void subListCreation() {
+        ArrayList<String> list = new ArrayList<String>();
+        list.add("A");
+        list.add("B");
+        list.add("C");
+        list.add("D");
+        list.add("E");
+        System.out.println("Original list: " + list);
+        List<String> subList = list.subList(0, 2);
+        System.out.println("Sublist: " + subList);
+    }
+
     public static void collectionShuffle() {
         ArrayList<String> list = new ArrayList<>();
         list.add("A");
@@ -30,8 +39,7 @@ public class Main {
     }
 
     public static void searchForAnElementTest() {
-        ArrayList<Integer> list = new ArrayList<>();
-        list.addAll(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+        ArrayList<Integer> list = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
         System.out.println(list);
         searchForAnElement(list, 5);
     }
