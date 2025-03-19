@@ -19,6 +19,16 @@ public class Main {
 
     }
 
+    public static void deleteThirdElement() {
+        ArrayList<String> list = new ArrayList<>();
+        list.add("A");
+        list.add("B");
+        list.add("C");
+        System.out.println(list);
+        list.remove(2);
+        System.out.println(list);
+    }
+
     public static void updateAnArrayTest() {
         ArrayList<String> list = new ArrayList<>();
         list.add("Meow");
