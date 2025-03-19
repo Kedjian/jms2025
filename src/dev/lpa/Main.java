@@ -1,6 +1,7 @@
 package dev.lpa;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 
 record GroceryItem(String name, String type, int count) {
     public GroceryItem(String name) {
@@ -15,8 +16,24 @@ record GroceryItem(String name, String type, int count) {
 
 public class Main {
     public static void main(String[] args) {
-        int[] testArray = {1, 2, 3, 4, 5};
-        pairsToSpecifiedNumber(testArray, 5);
+
+    }
+
+    public static void elementInsertTest() {
+        ArrayList<String> list = new ArrayList<String>();
+        list.add("A");
+        list.add("B");
+        list.add("C");
+        list.add(0, "0");
+        list.add(4, "1");
+        list.add(0, "0");
+        System.out.println(list);
+    }
+
+    public static void iterateThroughAnArrayList(ArrayList<String> arrayList) {
+        for (String item : arrayList) {
+            System.out.println(item);
+        }
     }
 
     public static void pairsToSpecifiedNumber(int[] array, int number) {
