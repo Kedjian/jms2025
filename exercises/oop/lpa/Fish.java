@@ -30,6 +30,13 @@ public class Fish extends Animal {
         super.move(speed);
         moveMuscles();
         moveBackFins();
+
+        if (speed == "extremely slow") {
+            swimBackwards();
+        } else if (speed == "extremely fast BUT backwards") {
+            swimBackwardsEXTREME();
+            System.out.println("Are you sure that's a fish?")
+        }
     }
 
     public void makeNoise() {
@@ -43,4 +50,8 @@ public class Fish extends Animal {
     public void moveBackFins() {
         System.out.println("Fish moves back fins");
     }
+
+    public void swimBackwards() { System.out.println("Fish swims backwards"); }
+
+    public void swimBackwardsEXTREME() { System.out.println("Fish swims backwards EXTREME"); }
 }
