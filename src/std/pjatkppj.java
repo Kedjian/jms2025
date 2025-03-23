@@ -91,5 +91,6 @@ public class pjatkppj {
 
         byte smallVal;
         smallVal = (byte) z;
+        System.out.println(smallVal);
     }
 }
