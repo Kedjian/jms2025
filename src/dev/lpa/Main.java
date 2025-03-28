@@ -14,7 +14,34 @@ record GroceryItem(String name, String type, int count) {
 
 public class Main {
     public static void main(String[] args) {
+        contains65and77Test();
+    }
 
+    private static void contains65and77Test() {
+        int[] a = {1, 2, 3, 65};
+        int[] b = {1, 2, 3, 4, 5, 65, 77};
+        contains65And77(a);
+        contains65And77(b);
+    }
+
+    private static void contains65And77(int[] arr) {
+        boolean var1 = false;
+        boolean var2 = false;
+        for (int j : arr) {
+            if (j == 65) {
+                var1 = true;
+                System.out.println(j + " " + "65");
+            }
+            if (j == 77) {
+                var2 = true;
+                System.out.println(j + " " + "77");
+            }
+        }
+        if (var1 && var2) {
+            System.out.println("Presented array contains both an integer of 65 and 77.");
+        } else {
+            System.out.println("Presented array does not contain both an integer of 65 and 77.");
+        }
     }
 
     private static void sumUpTo30Test(int[] arr) {
