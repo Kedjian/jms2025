@@ -14,6 +14,29 @@ record GroceryItem(String name, String type, int count) {
 
 public class Main {
     public static void main(String[] args) {
+
+    }
+
+    private static void summarizeEvenAndOddTest() {
+        int[] num_array = new int[]{10, 13, 27, 63, 72, 91, 104, 205, 574};
+        summarizeEvenAndOdd(num_array);
+    }
+
+    private static void summarizeEvenAndOdd(int[] array) {
+        int oddNum = 0;
+        int evenNum = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (i % 2 == 0) {
+                evenNum = evenNum + 1;
+            } else {
+                oddNum = oddNum + 1;
+            }
+        }
+        System.out.println("Even nums: " + evenNum + ".");
+        System.out.println("Odd nums: " + oddNum + ".");
+    }
+
+    private static void linkedListExercise() {
         var placesToVisit = new LinkedList<String>();
         placesToVisit.add("Sydney");
         placesToVisit.add(0, "Canberra");
