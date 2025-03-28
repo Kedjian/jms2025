@@ -17,6 +17,18 @@ public class Main {
 
     }
 
+    private static void differentiateBNTSNTest() {
+        ArrayList<Integer> a = new ArrayList<Integer>(Arrays.asList(4, 8, 10, 12, 16, 18, 23, 58, 19));
+        differentiateBNTSN(a);
+    }
+
+    private static void differentiateBNTSN(ArrayList<Integer> a) {
+        a.sort(Comparator.naturalOrder());
+        int lastNumPos = a.size() - 1;
+        int differentiate = a.get(lastNumPos) - a.get(0);
+        System.out.println(differentiate);
+    }
+
     private static void summarizeEvenAndOddTest() {
         int[] num_array = new int[]{10, 13, 27, 63, 72, 91, 104, 205, 574};
         summarizeEvenAndOdd(num_array);
