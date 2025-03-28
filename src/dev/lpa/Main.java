@@ -17,8 +17,31 @@ public class Main {
 
     }
 
+    private static void sumUpTo30Test(int[] arr) {
+        int[] a = {1, 2, 3, 4, 5};
+        sumUpTo30(a);
+        int[] b = {10, 10, 10, 10};
+        sumUpTo30(b);
+        int[] c = {10, 10, 10};
+        sumUpTo30(c);
+    }
+
+    private static void sumUpTo30(int[] arr) {
+        int sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == 10) {
+                sum = sum + arr[i];
+                }
+            }
+        if (sum == 30) {
+            System.out.println("The sum of all 10's is 30.");
+        } else {
+            System.out.println("The sum of all 10's is not 30.");
+        }
+    }
+
     private static void differentiateBNTSNTest() {
-        ArrayList<Integer> a = new ArrayList<Integer>(Arrays.asList(4, 8, 10, 12, 16, 18, 23, 58, 19));
+        ArrayList<Integer> a = new ArrayList<Integer>(Arrays.asList(4, 8, 10, 12, 16, 18, 23, 19));
         differentiateBNTSN(a);
     }
 
