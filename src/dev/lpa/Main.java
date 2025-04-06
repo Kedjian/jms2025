@@ -14,8 +14,14 @@ record GroceryItem(String name, String type, int count) {
 
 public class Main {
     public static void main(String[] args) {
-        Song TaylerSwift = new Song("Twój Stary", 3.14);
-        System.out.println(TaylerSwift);
+
+    }
+
+    private static void PlaylistCreator() {
+        Album album = new Album("Stormbringer", "Deep Purple");
+        boolean add = album.addSong("Stormbringer", 4.2);
+        boolean addSame = album.addSong("Stormbringer", 4.2);
+        album.addSong("Love don't mean a thing", 4.22);
     }
 
     public static ListIterator<Town> iterator;

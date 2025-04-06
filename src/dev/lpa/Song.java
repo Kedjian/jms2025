@@ -1,8 +1,8 @@
 package dev.lpa;
 
 public class Song {
-    String title;
-    double duration;
+    private String title;
+    private double duration;
 
     public Song(String title, double duration) {
         this.title = title;
