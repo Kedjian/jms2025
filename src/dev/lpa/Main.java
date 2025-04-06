@@ -14,7 +14,90 @@ record GroceryItem(String name, String type, int count) {
 
 public class Main {
     public static void main(String[] args) {
+        Song TaylerSwift = new Song("Twój Stary", 3.14);
+        System.out.println(TaylerSwift);
+    }
 
+    public static ListIterator<Town> iterator;
+    private static void linkedListExercise1() {
+        LinkedList<Town> towns = new LinkedList<>();
+        towns.add(new Town("Chojna", 0));
+        towns.add(new Town("Szczecin", 66));
+        towns.add(new Town("Gryfino", 38));
+        towns.add(new Town("Stargard", 53));
+        towns.add(new Town("Bytom", 492));
+        sortTownsByDistance(towns);
+        iterator = towns.listIterator();
+
+        while (true) {
+            System.out.println("""
+                Available actions: (select word or letter)
+                (F)orward
+                (B)ackward
+                (L)ist Places
+                (Q)uit
+                """);
+
+            Scanner sc = new Scanner(System.in);
+            while (sc.hasNextLine()) {
+                String line = sc.nextLine();
+                switch (line) {
+                    case "F", "Forward" -> forwardTheLinkedList(towns);
+                    case "L", "List Places" -> listPlaces(towns);
+                    case "B", "Backward" -> backwardTheLinkedList(towns);
+                    case "Q", "Quit" -> {
+                        System.out.println("Goodbye!");
+                        break;
+                    }
+                }
+            }
+        }
+    }
+
+    private static void forwardTheLinkedList(LinkedList<Town> towns) {
+        if (iterator.hasNext() && iterator != null) {
+            Town town = iterator.next();
+            System.out.println(town.townName);
+            if (!iterator.hasNext()) {
+                System.out.println("You're at the end of the list!");
+            }
+        }
+    }
+
+    private static void backwardTheLinkedList(LinkedList<Town> towns) {
+        if (iterator.hasPrevious() && iterator != null) {
+            Town town = iterator.previous();
+            System.out.println(town.townName);
+            if (!iterator.hasPrevious()) {
+                System.out.println("You're at the beginning of the list!");
+            }
+        }
+    }
+
+    private static void listPlaces(LinkedList<Town> towns) {
+        int i = 0;
+        ListIterator<Town> iterator = towns.listIterator();
+        while (iterator.hasNext()) {
+            Town town = iterator.next();
+            if (town.distanceFromStart == 0) {
+                System.out.println("Starting location: " + town.townName);
+            } else {
+                i++;
+                if (i == 1) {
+                    System.out.println(i + "st station: " + town.townName);
+                } else if (i == 2) {
+                    System.out.println(i + "nd station: " + town.townName);
+                } else if (i == 3) {
+                    System.out.println(i + "rd station: " + town.townName);
+                } else {
+                    System.out.println(i + "th station: " + town.townName);
+                }
+            }
+        }
+    }
+
+    private static void sortTownsByDistance(LinkedList<Town> towns) {
+        towns.sort(Comparator.comparingInt(Town::getDistanceFromStart));
     }
 
     private static void iteratorTesting() {
