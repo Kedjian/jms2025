@@ -14,7 +14,14 @@ record GroceryItem(String name, String type, int count) {
 
 public class Main {
     public static void main(String[] args) {
-        contains65and77Test();
+
+    }
+
+    private static void iteratorTesting() {
+        LinkedList<String> list = new LinkedList<>();
+        list.addAll(Arrays.asList("Brisbane", "Orcish", "Elvish", "Golden"));
+
+        testIterator(list);
     }
 
     private static void contains65and77Test() {
@@ -43,7 +50,7 @@ public class Main {
             System.out.println("Presented array does not contain both an integer of 65 and 77.");
         }
     }
-
+    
     private static void sumUpTo30Test(int[] arr) {
         int[] a = {1, 2, 3, 4, 5};
         sumUpTo30(a);
@@ -209,6 +216,23 @@ public class Main {
             System.out.println("---> From: " + previousTown + ", to: " + town);
             previousTown = town;
         }
+    }
+
+    private static void testIterator(LinkedList<String> list) {
+        var iterator = list.listIterator();
+        while (iterator.hasNext()) {
+           // System.out.println(iterator.next());
+            if (iterator.next().equals("Brisbane")) {
+                iterator.add("Nightbornish");
+            }
+        }
+        while (iterator.hasPrevious()) {
+            System.out.println(iterator.previous());
+        }
+        System.out.println(list);
+
+        var iterator2 = list.listIterator(3);
+        System.out.println(iterator2.next());
     }
 
     public static void collectionShuffle() {
