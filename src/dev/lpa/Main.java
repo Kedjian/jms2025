@@ -38,6 +38,17 @@ public class Main {
 
         Character[] characterArray = {'a', 'b', 'c', 'd'};
         System.out.println(Arrays.toString(characterArray));
+
+        var ourList = getList(1, 2, 3, 4, 5);
+        System.out.println(ourList);
+    }
+
+    private static ArrayList<Integer> getList(int... varargs) {
+        ArrayList<Integer> list = new ArrayList<>();
+        for (int var : varargs) {
+            list.add(var);
+        }
+        return list;
     }
 
     private static int returnAnInt(Integer i) {
