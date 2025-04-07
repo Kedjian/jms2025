@@ -14,6 +14,10 @@ record GroceryItem(String name, String type, int count) {
 
 public class Main {
     public static void main(String[] args) {
+
+    }
+
+    private static void autoboxingPractice() {
         Integer boxedInt = Integer.valueOf(15); // preferred but unnecessary
         /// Integer deprecatedBoxing = new Integer(15); deprecated
         int unboxedInt = boxedInt.intValue();
