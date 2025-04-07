@@ -14,7 +14,9 @@ record GroceryItem(String name, String type, int count) {
 
 public class Main {
     public static void main(String[] args) {
-
+        Bank wawaBank = new Bank("Wawa Bank");
+        wawaBank.addNewCustomer("premek", 5000);
+        System.out.println(wawaBank.customers.get(0));
     }
 
     private static void autoboxingPractice() {
