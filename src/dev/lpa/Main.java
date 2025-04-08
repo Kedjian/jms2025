@@ -15,7 +15,8 @@ record GroceryItem(String name, String type, int count) {
 public class Main {
     public static void main(String[] args) {
         ElectronicsProduct iPhone12 = new ElectronicsProduct("00033221", "iPhone12", 425);
-        System.out.println(iPhone12.calculateDiscount(iPhone12, 25));
+        System.out.println(iPhone12.calculateFlatAmountDiscount(25));
+        System.out.println(iPhone12.calculatePercentageDiscount(50));
     }
 
     private static void autoboxingPractice() {

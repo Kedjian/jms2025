@@ -35,8 +35,11 @@ public class ElectronicsProduct {
         this.price = price;
     }
 
-    public double calculateDiscount(ElectronicsProduct product, double discount) {
-        double price = product.getPrice();
+    public double calculateFlatAmountDiscount(double discount) {
         return price - discount;
+    }
+
+    public double calculatePercentageDiscount(int percentage) {
+        return price * percentage / 100;
     }
 }
