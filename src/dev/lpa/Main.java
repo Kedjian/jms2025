@@ -14,9 +14,8 @@ record GroceryItem(String name, String type, int count) {
 
 public class Main {
     public static void main(String[] args) {
-        Bank wawaBank = new Bank("Wawa Bank");
-        wawaBank.addNewCustomer("premek", 5000);
-        System.out.println(wawaBank.customers.get(0));
+        ElectronicsProduct iPhone12 = new ElectronicsProduct("00033221", "iPhone12", 425);
+        System.out.println(iPhone12.calculateDiscount(iPhone12, 25));
     }
 
     private static void autoboxingPractice() {
