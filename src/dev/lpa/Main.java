@@ -23,8 +23,8 @@ public class Main {
         boschWashingMachine.extendWarranty(123);
         System.out.println(boschWashingMachine.getWarrantyDays());
 
-        boschWashingMachine.calculateFlatAmountDiscount(500);
-        boschWashingMachine.calculatePercentageDiscount(75);
+        System.out.println(boschWashingMachine.calculateFlatAmountDiscount(500));
+        System.out.println(boschWashingMachine.calculatePercentageDiscount(99));
     }
 
     private static void autoboxingPractice() {
