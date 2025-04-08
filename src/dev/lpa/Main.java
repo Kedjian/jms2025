@@ -25,6 +25,8 @@ public class Main {
 
         System.out.println(boschWashingMachine.calculateFlatAmountDiscount(500));
         System.out.println(boschWashingMachine.calculatePercentageDiscount(99));
+
+        WashingMaschine secondWashingMachine = new WashingMaschine("000444332", "Second machine", 1500, 120);
     }
 
     private static void autoboxingPractice() {
