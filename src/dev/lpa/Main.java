@@ -17,6 +17,14 @@ public class Main {
         ElectronicsProduct iPhone12 = new ElectronicsProduct("00033221", "iPhone12", 425);
         System.out.println(iPhone12.calculateFlatAmountDiscount(25));
         System.out.println(iPhone12.calculatePercentageDiscount(50));
+
+        WashingMaschine boschWashingMachine = new WashingMaschine("00044332", "Typical washing machine", 1250, 364);
+        System.out.println(boschWashingMachine.getWarrantyDays());
+        boschWashingMachine.extendWarranty(123);
+        System.out.println(boschWashingMachine.getWarrantyDays());
+
+        boschWashingMachine.calculateFlatAmountDiscount(500);
+        boschWashingMachine.calculatePercentageDiscount(75);
     }
 
     private static void autoboxingPractice() {

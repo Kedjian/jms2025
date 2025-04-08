@@ -43,3 +43,21 @@ public class ElectronicsProduct {
         return price * percentage / 100;
     }
 }
+
+class WashingMaschine extends ElectronicsProduct {
+
+    private int warrantyDays;
+
+    public WashingMaschine(String productID, String name, double price, int warrantyDays) {
+        super(productID, name, price);
+        this.warrantyDays = warrantyDays;
+    }
+
+    public void extendWarranty(int dayAmount) {
+        warrantyDays = warrantyDays + dayAmount;
+    }
+
+    public int getWarrantyDays() {
+        return warrantyDays;
+    }
+}
