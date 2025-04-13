@@ -14,11 +14,27 @@ record GroceryItem(String name, String type, int count) {
 
 public class Main {
     public static void main(String[] args) {
+        Bank bank = new Bank("National Australia Bank");
+
+        bank.addBranch("Adelaide");
+
+        bank.addCustomer("Adelaide", "Tim", 50.05);
+        bank.addCustomer("Adelaide", "Mike", 175.34);
+        bank.addCustomer("Adelaide", "Percy", 220.12);
+
+        bank.addCustomerTransaction("Adelaide", "Tim", 44.22);
+        bank.addCustomerTransaction("Adelaide", "Tim", 12.44);
+        bank.addCustomerTransaction("Adelaide", "Mike", 1.65);
+
+        bank.listCustomers("Adelaide", true);
+    }
+
+    private static void rememberingOOP() {
         ElectronicsProduct iPhone12 = new ElectronicsProduct("00033221", "iPhone12", 425);
         System.out.println(iPhone12.calculateFlatAmountDiscount(25));
         System.out.println(iPhone12.calculatePercentageDiscount(50));
 
-        WashingMaschine boschWashingMachine = new WashingMaschine("00044332", "Typical washing machine", 1250, 364);
+        WashingMachine boschWashingMachine = new WashingMachine("00044332", "Typical washing machine", 1250, 364);
         System.out.println(boschWashingMachine.getWarrantyDays());
         boschWashingMachine.extendWarranty(123);
         System.out.println(boschWashingMachine.getWarrantyDays());
@@ -26,7 +42,7 @@ public class Main {
         System.out.println(boschWashingMachine.calculateFlatAmountDiscount(500));
         System.out.println(boschWashingMachine.calculatePercentageDiscount(99));
 
-        WashingMaschine secondWashingMachine = new WashingMaschine("000444332", "Second machine", 1500, 120);
+        WashingMachine secondWashingMachine = new WashingMachine("000444332", "Second machine", 1500, 120);
     }
 
     private static void autoboxingPractice() {

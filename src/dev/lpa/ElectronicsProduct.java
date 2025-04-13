@@ -44,11 +44,11 @@ public class ElectronicsProduct {
     }
 }
 
-class WashingMaschine extends ElectronicsProduct {
+class WashingMachine extends ElectronicsProduct {
 
     private int warrantyDays;
 
-    public WashingMaschine(String productID, String name, double price, int warrantyDays) {
+    public WashingMachine(String productID, String name, double price, int warrantyDays) {
         super(productID, name, price);
         this.warrantyDays = warrantyDays;
     }
