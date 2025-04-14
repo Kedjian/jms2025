@@ -1,6 +1,7 @@
 package dev.lpa;
 import java.util.*;
 
+
 record GroceryItem(String name, String type, int count) {
     public GroceryItem(String name) {
         this(name, "DAIRY", 1);
@@ -14,6 +15,10 @@ record GroceryItem(String name, String type, int count) {
 
 public class Main {
     public static void main(String[] args) {
+
+    }
+
+    private static void bankApplicationTest() {
         Bank bank = new Bank("National Australia Bank");
 
         bank.addBranch("Adelaide");
