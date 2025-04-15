@@ -4,11 +4,15 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
+        Triangle triangleTest = new Triangle(3.2, 2.1, 5.3, 2.3);
+        triangleTest.showResults();
 
+        Circle circleTest = new Circle(3);
+        circleTest.showResults();
     }
 
     public static void studyingAbstraction() {
-        // Animal animal new Animal("animal", "big", 100);
+        /// Animal animal new Animal("animal", "big", 100);
         Dog dog = new Dog("Wolf", "big", 100);
         doAnimalStuff(dog);
         ArrayList<Animal> animals = new ArrayList<>();
