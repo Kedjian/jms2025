@@ -5,6 +5,9 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
 
+    }
+
+    public static void studyingAbstraction() {
         // Animal animal new Animal("animal", "big", 100);
         Dog dog = new Dog("Wolf", "big", 100);
         doAnimalStuff(dog);
@@ -15,8 +18,13 @@ public class Main {
         animals.add(new Fish("Goofball", "small", 5));
         animals.add(new Dog("Pug","medium", 10));
 
+        animals.add(new Horse("Clydesdale", "large", 1000));
+
         for (Animal animal : animals) {
             doAnimalStuff(animal);
+            if (animal instanceof Mammal currentMammal) {
+                currentMammal.shedHair();
+            }
         }
     }
 
