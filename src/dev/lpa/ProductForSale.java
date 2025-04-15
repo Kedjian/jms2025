@@ -1,10 +1,5 @@
 package dev.lpa;
 
-record OrderItem() {
-    static int quantity;
-    static ProductForSale product;
-}
-
 public abstract class ProductForSale {
     protected String type;
     protected double price;
@@ -16,10 +11,11 @@ public abstract class ProductForSale {
         this.description = description;
     }
 
-    public void getSalesPrice(int quantity) {
+    public double getSalesPrice(int quantity) {
         double salesPrice = quantity * price;
-        System.out.println(getExplicitType() + "of product in "
-                + quantity + " costs " + salesPrice + ".");
+        System.out.println(getExplicitType() + " of product in "
+                + quantity + " costs " + salesPrice + "$ each.");
+        return salesPrice;
     }
 
     public void printPricedItem(int quantity) {
