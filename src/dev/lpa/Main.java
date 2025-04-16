@@ -4,6 +4,10 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
+
+    }
+
+    public static void abstractionExercise3() {
         Rat unit1 = new Rat("Minikulek", 1, "Very small");
         unit1.doWhatCreaturesDo();
         System.out.println();
