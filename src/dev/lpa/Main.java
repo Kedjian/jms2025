@@ -4,7 +4,17 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
+        CurrentAccount test = new CurrentAccount("Oskar",
+                "Makowski", "05.08.2001", 500);
+        test.deposit(10);
+        test.deposit(-10);
+        test.withdraw(50);
+        System.out.println(test.showAccountState());
 
+        SavingsAccount savingsTest = new SavingsAccount("Oskar",
+                "Makowski", "05.08.2001", 6500);
+        savingsTest.deposit(100);
+        System.out.println(savingsTest.showAccountState());
     }
 
     public static void abstractionExercise1() {
