@@ -7,6 +7,13 @@ public class Main {
 
     }
 
+    public static void abstractionExercise4() {
+        Manager testManager = new Manager("Leon", "Bollywoodzki Inicjator",
+                "LGBT Gaming Official",21, 31, 164);
+        System.out.println(testManager.displayInfo());
+        System.out.println(testManager.calculateSalary());
+    }
+
     public static void abstractionExercise3() {
         Rat unit1 = new Rat("Minikulek", 1, "Very small");
         unit1.doWhatCreaturesDo();
