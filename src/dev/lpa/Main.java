@@ -4,7 +4,13 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        Triangle triangleTest = new Triangle(3.2, 2.1, 5.3, 2.3);
+
+    }
+
+    public static void abstractionExercise1() {
+        Triangle triangleTest = new Triangle(
+                3.2, 2.1,
+                5.3, 2.3);
         triangleTest.showResults();
 
         Circle circleTest = new Circle(3);

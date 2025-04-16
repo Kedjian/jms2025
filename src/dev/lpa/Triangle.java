@@ -1,8 +1,10 @@
 package dev.lpa;
 
 public class Triangle extends Shape {
-    public Triangle(double triangleBase, double triangleSecondSide, double triangleThirdSide, double triangleHeight) {
-        super(triangleBase, triangleSecondSide, triangleThirdSide, triangleHeight);
+    public Triangle(double triangleBase, double triangleSecondSide,
+                    double triangleThirdSide, double triangleHeight) {
+        super(triangleBase, triangleSecondSide,
+                triangleThirdSide, triangleHeight);
     }
 
     protected double half = 0.5;
