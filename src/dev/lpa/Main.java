@@ -4,6 +4,28 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
+        Rat unit1 = new Rat("Minikulek", 1, "Very small");
+        unit1.doWhatCreaturesDo();
+        System.out.println();
+
+        Lion unit2 = new Lion("Drakulek", 2, "Relatively big");
+        unit2.doWhatCreaturesDo();
+        System.out.println();
+
+        Deer unit3 = new Deer("Miłek", 1, "Medium");
+        unit3.doWhatCreaturesDo();
+        System.out.println();
+
+        Tiger unit4 = new Tiger("Rogatek", 1, "Huge");
+        unit4.doWhatCreaturesDo();
+        System.out.println();
+
+        Human unit5 = new Human("Oskar", 23, "Relatively big");
+        unit5.doWhatCreaturesDo();
+        System.out.println();
+    }
+
+    public static void abstractionExercise2() {
         CurrentAccount test = new CurrentAccount("Oskar",
                 "Makowski", "05.08.2001", 500);
         test.deposit(10);

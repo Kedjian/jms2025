@@ -16,12 +16,12 @@ public class CurrentAccount extends BankAccount {
     }
 
     @Override
-    public double withdraw(double amount) {
+    public void withdraw(double amount) {
         if (amount > 0) {
             initialDeposit -= amount;
         } else {
             System.out.println("No need to specify the minus. Withdrawing means subtracting money from your account.");
-        } return initialDeposit;
+        }
     }
 
     @Override

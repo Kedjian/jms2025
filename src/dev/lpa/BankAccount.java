@@ -15,7 +15,7 @@ public abstract class BankAccount {
     }
 
     public abstract void deposit(double amount);
-    public abstract double withdraw(double amount);
+    public abstract void withdraw(double amount);
     public abstract double showAccountState();
 
 }
