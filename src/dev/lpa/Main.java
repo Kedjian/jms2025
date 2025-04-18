@@ -19,6 +19,9 @@ public class Main {
 //        tracked.stopTracking();
 
         inFlight(flier);
+        inFlight(new JetInterface());
+        Trackable truck = new TruckInterface();
+        truck.track();
     }
 
     private static void inFlight(FlightEnabled flier) {
