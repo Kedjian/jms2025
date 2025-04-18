@@ -1,10 +1,33 @@
 package dev.lpa;
 
+import javax.sound.midi.Track;
 import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
+        BirdInterface bird = new BirdInterface();
+        AnimalInterfaces animal = bird;
+        FlightEnabled flier = bird;
+        Trackable tracked = bird;
 
+        animal.move();
+
+//        flier.takeOff();
+//        flier.fly();
+//        flier.land();
+//        tracked.track();
+//        tracked.stopTracking();
+
+        inFlight(flier);
+    }
+
+    private static void inFlight(FlightEnabled flier) {
+        flier.takeOff();
+        flier.fly();
+        if (flier instanceof  Trackable tracked) {
+            tracked.track();
+        }
+        flier.land();
     }
 
     public static void abstractionExercise4() {
