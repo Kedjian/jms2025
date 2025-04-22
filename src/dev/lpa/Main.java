@@ -10,6 +10,17 @@ public class Main {
 
     }
 
+    public static void interfaceExercise5() {
+        Football object1 = new Football();
+        System.out.println(object1.play());
+
+        Volleyball object2 = new Volleyball();
+        System.out.println(object2.play());
+
+        Basketball object3 = new Basketball();
+        System.out.println(object3.play());
+    }
+
     public static void interfaceExercise4() {
         ResizableRectangle object1 = new ResizableRectangle(2,3);
         System.out.println(object1);
