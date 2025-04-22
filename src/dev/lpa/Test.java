@@ -23,4 +23,10 @@ public class Test {
         flier.fly();
         flier.land();
     }
+
+    // An abstract class provides a common definition,
+    // as a base class, that multiple derived classes can share
+
+    // The interface decouples the "what" from the "how", and is used
+    // to make different types behave in similar ways
 }
