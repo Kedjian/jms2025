@@ -25,4 +25,10 @@ public class JetInterface implements FlightEnabled, Trackable {
     public void stopTracking() {
         System.out.println(getClass().getSimpleName() + " is not being tracked anymore.");
     }
+
+    @Override
+    public FlightStages transition(FlightStages stage) {
+        System.out.println(getClass().getSimpleName() + " transitioning");
+        return FlightEnabled.super.transition(stage);
+    }
 }
