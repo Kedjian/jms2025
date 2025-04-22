@@ -7,6 +7,21 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
+
+    }
+
+    public static void interfaceExercise2() {
+        CircleInterface circle = new CircleInterface(5);
+        System.out.println(circle.getArea());
+
+        SquareInterface square = new SquareInterface(2);
+        System.out.println(square.getArea());
+
+        RectangleInterface rectangle = new RectangleInterface(3, 2);
+        System.out.println(rectangle.getArea());
+    }
+
+    public static void interfaceExercise1() {
         BirdInterface bird = new BirdInterface();
         AnimalInterfaces animal = bird;
         FlightEnabled flier = bird;
