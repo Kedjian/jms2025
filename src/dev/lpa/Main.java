@@ -10,6 +10,20 @@ public class Main {
 
     }
 
+    public static void interfaceExercise3() {
+        Helicopter object1 = new Helicopter("Boeing AH",
+                "64 Apache", 12);
+        System.out.println(object1.fly_obj());
+
+        Airplane object2 = new Airplane("XL Ryanair",
+                "Boeing 737");
+        System.out.println(object2.fly_obj());
+
+        Spacecraft object3 = new Spacecraft("Lithoid",
+                "Mammalian Colossus");
+        System.out.println(object3.fly_obj());
+    }
+
     public static void interfaceExercise2() {
         CircleInterface circle = new CircleInterface(5);
         System.out.println(circle.getArea());
