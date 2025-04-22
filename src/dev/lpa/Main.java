@@ -10,6 +10,14 @@ public class Main {
 
     }
 
+    public static void interfaceExercise4() {
+        ResizableRectangle object1 = new ResizableRectangle(2,3);
+        System.out.println(object1);
+        object1.resizeHeight(5);
+        object1.resizeWidth(3);
+        System.out.println(object1);
+    }
+
     public static void interfaceExercise3() {
         Helicopter object1 = new Helicopter("Boeing AH",
                 "64 Apache", 12);
