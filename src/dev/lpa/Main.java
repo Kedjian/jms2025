@@ -2,12 +2,28 @@ package dev.lpa;
 
 import javax.sound.midi.Track;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
 
+    }
+
+    public static void interfaceExercise6() {
+        Player hero1 = new Player("Knight", 25, 10);
+        hero1.write();
+        System.out.println(hero1);
+
+        List<String> hero2Data = new ArrayList<String>();
+        hero2Data.add(0, "Mage");
+        hero2Data.add(1, String.valueOf(25));
+        hero2Data.add(2, String.valueOf(30));
+        hero2Data.add(3, "Magical staff");
+        Player hero2 = new Player("Null", 0, 0);
+        hero2.read(hero2Data);
+        System.out.println(hero2);
     }
 
     public static void interfaceExercise5() {
