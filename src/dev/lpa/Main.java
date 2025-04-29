@@ -1,5 +1,9 @@
 package dev.lpa;
 
+import java.sql.ClientInfoStatus;
+import java.util.ArrayList;
+import java.util.List;
+
 interface Player {
     String name();
 }
@@ -11,7 +15,17 @@ record GolfPlayer(String name, String position) implements Player {}
 
 public class Main {
     public static void main(String[] args) {
+        List<Mappable> mappables = new ArrayList<>();
+        mappables.add(new Building("Sydney Residency", UsageType.RESIDENTAL));
+        mappables.add(new Building("Sydney Opera House", UsageType.ENTERTAINMENT));
+        mappables.add(new Building("Sydney Town Hall", UsageType.GOVERNMENT));
 
+        for (var m : mappables) {
+            Mappable.mapIt(m);
+        }
+    }
+
+    public static void genericsExercise1() {
         var philly = new Affiliation("city", "Philadelphia, PA", "US");
 
         BaseballTeam phillies1 = new BaseballTeam("Philadelphia Phillies");
