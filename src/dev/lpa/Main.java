@@ -1,18 +1,25 @@
 package dev.lpa;
 
-interface Player {}
+interface Player {
+    String name();
+}
 
 record BaseballPlayer(String name, String position) implements Player {}
 record FootballPlayer(String name, String position) implements Player {}
+record VolleyballPlayer(String name, String position) implements Player {}
+record GolfPlayer(String name, String position) implements Player {}
 
 public class Main {
     public static void main(String[] args) {
+
+        var philly = new Affiliation("city", "Philadelphia, PA", "US");
+
         BaseballTeam phillies1 = new BaseballTeam("Philadelphia Phillies");
         BaseballTeam astros1 = new BaseballTeam("Houston Astros");
         scoreResult(phillies1, 3, astros1, 5);
 
-        Team<BaseballPlayer> phillies2 = new Team<>("Philadelphia Phillies");
-        Team<BaseballPlayer> astros2 = new Team<>("Houston Astros");
+        Team<BaseballPlayer, Affiliation> phillies2 = new Team<>("Philadelphia Phillies", philly);
+        Team<BaseballPlayer, Affiliation> astros2 = new Team<>("Houston Astros");
         scoreResult(phillies2, 3, astros2, 5);
 
         SportsTeam phillies = new SportsTeam("Philadelphia Phillies");
@@ -21,19 +28,32 @@ public class Main {
 
         var harper = new BaseballPlayer("B Harper", "Right Fielder");
         var marsh = new BaseballPlayer("B Marsh", "Right Fielder");
-        phillies.addTeamMember(harper);
-        phillies.addTeamMember(marsh);
+        phillies2.addTeamMember(harper);
+        phillies2.addTeamMember(marsh);
         var guthrie = new BaseballPlayer("D Guthrie", "Center Fielder");
-        phillies.addTeamMember(guthrie);
-        phillies.listTeamMembers();
+        phillies2.addTeamMember(guthrie);
+        phillies2.listTeamMembers();
 
         SportsTeam afc1 = new SportsTeam("Adelaide Crows");
-        Team<FootballPlayer> afc = new Team<>("Adelaide Crows");
+        Team<FootballPlayer, Affiliation> afc = new Team<>("Adelaide Crows");
         var tex = new FootballPlayer("Tex Walker", "Centre half forward");
         afc.addTeamMember(tex);
         var rory = new FootballPlayer("Rory Laird", "Midfield");
         afc.addTeamMember(rory);
         afc.listTeamMembers();
+
+        Team<VolleyballPlayer, Affiliation> adelaide = new Team<>("Adelaide Storm");
+        adelaide.addTeamMember(new VolleyballPlayer("N Roberts", "Setter"));
+        adelaide.listTeamMembers();
+
+        var canberra = new Team<VolleyballPlayer, Affiliation>("Canberra Heat");
+        canberra.addTeamMember(new VolleyballPlayer("H Harvey", "Fielder"));
+        canberra.listTeamMembers();
+        scoreResult(canberra, 0, adelaide, 1);
+
+        Team<GolfPlayer, Affiliation> melbourneVB = new Team<>("Melbourne Vipers");
+        melbourneVB.addTeamMember(new GolfPlayer("R Robertson", "Golf Position"));
+        melbourneVB.listTeamMembers();
     }
 
     public static void scoreResult(BaseballTeam team1, int t1_score,
