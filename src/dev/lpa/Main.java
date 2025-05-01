@@ -2,7 +2,10 @@ package dev.lpa;
 
 import java.sql.ClientInfoStatus;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+
+import static dev.lpa.ArraysCompare.compare_Arrays;
 
 interface Player {
     String name();
@@ -16,6 +19,28 @@ record GolfPlayer(String name, String position) implements Player {}
 public class Main {
     public static void main(String[] args) {
 
+    }
+
+    public static void genericsExercise3() {
+        Integer[] arr1 = {1, 2, 3, 4};
+        Integer[] arr2 = {1, 2, 3, 4};
+        Integer[] arr3 = {3, 2, 1, 4, 5};
+        Integer[] arr4 = {5, 2, 3, 1, 6};
+        String[] arr5 = {"JavaScript", "World"};
+        String[] arr6 = {"JavaScript", "World"};
+
+        System.out.println("Original arrays:");
+        System.out.println("arr1: " + Arrays.toString(arr1));
+        System.out.println("arr2: " + Arrays.toString(arr2));
+        System.out.println("arr3: " + Arrays.toString(arr3));
+        System.out.println("arr4: " + Arrays.toString(arr4));
+        System.out.println("arr5: " + Arrays.toString(arr5));
+        System.out.println("arr6: " + Arrays.toString(arr6));
+
+        System.out.println("\nCompare arr1 and arr2: " + compare_Arrays(arr1, arr2));
+        System.out.println("Compare arr1 and arr3: " + compare_Arrays(arr1, arr3));
+        System.out.println("Compare arr4 and arr5: " + compare_Arrays(arr4, arr5));
+        System.out.println("Compare arr5 and arr6: " + compare_Arrays(arr5, arr6));
     }
 
     public static void genericsExercise2() {
