@@ -8,6 +8,7 @@ import java.util.List;
 import static dev.lpa.ArraysCompare.compare_Arrays;
 import static dev.lpa.EvenOddSummer.sum_Even_and_Odd;
 import static dev.lpa.ListSearch.search_Through_List;
+import static dev.lpa.ListReverse.reverse_a_List;
 
 interface Player {
     String name();
@@ -21,6 +22,14 @@ record GolfPlayer(String name, String position) implements Player {}
 public class Main {
     public static void main(String[] args) {
 
+    }
+
+    public static void genericsExercise6() {
+        List<Integer> integers = List.of(1, 2, 3, 4, 5);
+        reverse_a_List(integers);
+
+        List<String> theTruth = List.of("I love", "Cedrick", "My beloved", "Dragon Boyfriend");
+        reverse_a_List(theTruth);
     }
 
     public static void genericsExercise5() {
