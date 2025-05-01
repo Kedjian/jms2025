@@ -6,6 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import static dev.lpa.ArraysCompare.compare_Arrays;
+import static dev.lpa.EvenOddSummer.sum_Even_and_Odd;
 
 interface Player {
     String name();
@@ -19,6 +20,14 @@ record GolfPlayer(String name, String position) implements Player {}
 public class Main {
     public static void main(String[] args) {
 
+    }
+
+    public static void genericsExercise4() {
+        List<Integer> integers = List.of(1, 2, 3, 4, 5, 6, 7);
+        List<Double> doubles = List.of(2.0, 1.5, 4.2, 2.1);
+
+        sum_Even_and_Odd(integers);
+        sum_Even_and_Odd(doubles);
     }
 
     public static void genericsExercise3() {
