@@ -11,6 +11,7 @@ record Affiliation(String name, String type, String countryCode) {
     }
 }
 
+
 public class Team<T extends Player, S> {
 
     private String teamName;

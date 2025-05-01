@@ -15,6 +15,10 @@ record GolfPlayer(String name, String position) implements Player {}
 
 public class Main {
     public static void main(String[] args) {
+
+    }
+
+    public static void genericsExercise2() {
         List<Mappable> mappables = new ArrayList<>();
         mappables.add(new Building("Sydney Residency", UsageType.RESIDENTAL));
         mappables.add(new Building("Sydney Opera House", UsageType.ENTERTAINMENT));
