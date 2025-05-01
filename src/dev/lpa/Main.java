@@ -9,6 +9,7 @@ import static dev.lpa.ArraysCompare.compare_Arrays;
 import static dev.lpa.EvenOddSummer.sum_Even_and_Odd;
 import static dev.lpa.ListSearch.search_Through_List;
 import static dev.lpa.ListReverse.reverse_a_List;
+import static dev.lpa.ArrayListMerger.mergeArrays;
 
 interface Player {
     String name();
@@ -22,6 +23,19 @@ record GolfPlayer(String name, String position) implements Player {}
 public class Main {
     public static void main(String[] args) {
 
+    }
+
+    public static void genericsExercise7() {
+        ArrayList<Integer> arr1 = new ArrayList<>(List.of(1, 2, 3, 4, 5));
+        ArrayList<Integer> arr2 = new ArrayList<>(List.of(10, 11, 12, 13, 14, 15));
+
+        ArrayListMerger.mergeArrays(arr1, arr2);
+
+        ArrayList<String> message1 = new ArrayList<>(List.of("My", "boyfriend", "whom", "never", "Still", "my", "Sebastian."));
+        ArrayList<String> message2 = new ArrayList<>(List.of("beloved", "Cedrick", "I will", "forget", "in", "memory"));
+
+        mergeArrays(message1, message2);
+        System.out.println("This information will never cease.");
     }
 
     public static void genericsExercise6() {
