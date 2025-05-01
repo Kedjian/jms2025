@@ -10,6 +10,7 @@ import static dev.lpa.EvenOddSummer.sum_Even_and_Odd;
 import static dev.lpa.ListSearch.search_Through_List;
 import static dev.lpa.ListReverse.reverse_a_List;
 import static dev.lpa.ArrayListMerger.mergeArrays;
+import static dev.lpa.PredicateArray.predicate_Arrays;
 
 interface Player {
     String name();
@@ -23,6 +24,18 @@ record GolfPlayer(String name, String position) implements Player {}
 public class Main {
     public static void main(String[] args) {
 
+    }
+
+    public static void genericsExercise8() {
+        List<Integer> integers = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+        List<Integer> predicativeIntegers = List.of(5, 10);
+
+        PredicateArray.predicate_Arrays(integers, predicativeIntegers);
+
+        List<String> texts = List.of("The world", "I love", "is lacking", "good in it", "my boyfriend", "Cedrick",
+                "I will", "I might", "I am", "going to", "give up", "pause", "Sebastian?", "Sebastian", "is his human name");
+        List<String> predicativeTexts = List.of("is his human name", "Cedrick", "Sebastian", "my boyfriend", "I love");
+        PredicateArray.predicate_Arrays(texts, predicativeTexts);
     }
 
     public static void genericsExercise7() {
