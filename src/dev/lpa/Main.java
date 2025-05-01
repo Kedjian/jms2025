@@ -1,6 +1,5 @@
 package dev.lpa;
 
-import java.sql.ClientInfoStatus;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -23,7 +22,7 @@ record GolfPlayer(String name, String position) implements Player {}
 
 public class Main {
     public static void main(String[] args) {
-
+        genericsExercise8();
     }
 
     public static void genericsExercise8() {
@@ -35,7 +34,7 @@ public class Main {
         List<String> texts = List.of("The world", "I love", "is lacking", "good in it", "my boyfriend", "Cedrick",
                 "I will", "I might", "I am", "going to", "give up", "pause", "Sebastian?", "Sebastian", "is his human name");
         List<String> predicativeTexts = List.of("is his human name", "Cedrick", "Sebastian", "my boyfriend", "I love");
-        PredicateArray.predicate_Arrays(texts, predicativeTexts);
+        predicate_Arrays(texts, predicativeTexts);
     }
 
     public static void genericsExercise7() {

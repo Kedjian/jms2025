@@ -1,4 +1,4 @@
-import dev.lpa.Localabble;
+package dev.lpa;
 
 import java.util.List;
 
