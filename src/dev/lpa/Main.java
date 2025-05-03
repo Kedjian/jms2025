@@ -1,8 +1,6 @@
 package dev.lpa;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 import static dev.lpa.ArraysCompare.compare_Arrays;
 import static dev.lpa.EvenOddSummer.sum_Even_and_Odd;
@@ -22,6 +20,30 @@ record GolfPlayer(String name, String position) implements Player {}
 
 public class Main {
     public static void main(String[] args) {
+        int studentCount = 10;
+        List<StudentExtra> students = new ArrayList<>();
+        for (int i = 0; i < studentCount; i++) {
+            students.add(new StudentExtra());
+        }
+        students.add(new LPAStudent());
+        printList(students);
+
+        List<LPAStudent> LPAstudents = new ArrayList<>();
+        for (int i = 0; i < studentCount; i++) {
+            LPAstudents.add(new LPAStudent());
+        }
+        printList(LPAstudents);
+    }
+
+    public static void printList(List students) {
+
+        for (var student : students) {
+            System.out.println(student);
+        }
+        System.out.println();
+    }
+
+    public static void genericsExercise10() {
         Integer five = 5;
         Integer[] others = {0, 5, 10, -50, 50};
 
@@ -51,6 +73,12 @@ public class Main {
         Student [] students = {new Student("Zach"), new Student("Tim"), new Student("Ann")};
 
         Arrays.sort(students);
+        System.out.println(Arrays.toString(students));
+
+        System.out.println("result = " + tim.compareTo(new Student("Mary")));
+
+        Comparator<Student> gpaSorter = new StudentGPAComparator();
+        Arrays.sort(students, gpaSorter.reversed());
         System.out.println(Arrays.toString(students));
     }
 
@@ -229,21 +257,38 @@ public class Main {
     }
 }
 
-class Student implements Comparable {
-    private String name;
+class StudentGPAComparator implements Comparator<Student> {
+    public int compare(Student o1, Student o2) {
+        return (o1.gpa + o1.name).compareTo(o2.gpa + o2.name);
+    }
+}
+
+class Student implements Comparable<Student> {
+    String name;
+    private static int LAST_ID = 1000;
+    static Random random = new Random();
+    private int id;
+    protected double gpa;
 
     public Student(String name) {
         this.name = name;
+        id = LAST_ID++;
+        gpa = random.nextDouble(1.0, 4.0);
     }
 
     @Override
     public String toString() {
-        return name;
+        return "%d - %s (%.2f)".formatted(id, name, gpa);
     }
 
+//    @Override
+//    public int compareTo(Object o) {
+//        Student other = (Student) o;
+//        return name.compareTo(other.name);
+//    }
+
     @Override
-    public int compareTo(Object o) {
-        Student other = (Student) o;
-        return name.compareTo(other.name);
+    public int compareTo(Student o) {
+        return Integer.valueOf(id).compareTo(Integer.valueOf(o.id));
     }
 }
