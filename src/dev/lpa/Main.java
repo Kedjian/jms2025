@@ -20,6 +20,16 @@ record GolfPlayer(String name, String position) implements Player {}
 
 public class Main {
     public static void main(String[] args) {
+
+    }
+
+    public static void genericsExercise12() {
+        testList(new ArrayList<String>(List.of("Able", "Barry", "Charlie")));
+        testList(new ArrayList<Integer>(List.of(1, 2, 3, 4, 5)));
+        testList(new ArrayList<Character>(List.of('a', 'b', 'c', 'd')));
+    }
+
+    public static void genericsExercise11() {
         int studentCount = 10;
         List<StudentExtra> students = new ArrayList<>();
         for (int i = 0; i < studentCount; i++) {
@@ -27,18 +37,28 @@ public class Main {
         }
         students.add(new LPAStudent());
         printList(students);
+        printMoreLists(students);
 
         List<LPAStudent> LPAstudents = new ArrayList<>();
         for (int i = 0; i < studentCount; i++) {
             LPAstudents.add(new LPAStudent());
         }
         printList(LPAstudents);
+        printMoreLists(LPAstudents);
     }
 
-    public static void printList(List students) {
+    public static <T extends StudentExtra> void printList(List<T> students) {
 
         for (var student : students) {
-            System.out.println(student);
+            System.out.println(student.getYearStarted() + ": " + student);
+        }
+        System.out.println();
+    }
+
+    public static void printMoreLists(List<? extends StudentExtra> students) {
+
+        for (var student : students) {
+            System.out.println(student.getYearStarted() + ": " + student);
         }
         System.out.println();
     }
@@ -254,6 +274,18 @@ public class Main {
         String message = team1.setScore(t1_score, t2_score);
         team2.setScore(t2_score, t1_score);
         System.out.printf("%s %s %s %n", team1, message, team2);
+    }
+
+    public static void testList(List<?> list) {
+        for (var element : list) {
+            if (element instanceof String s) {
+                System.out.println("String: " + s.toUpperCase());
+            } else if (element instanceof Integer i) {
+                System.out.println("Integer: " + i.floatValue());
+            } else if (element instanceof Character c) {
+                System.out.println("Character: " + c);
+            }
+        }
     }
 }
 
