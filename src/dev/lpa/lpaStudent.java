@@ -2,10 +2,10 @@ package dev.lpa;
 
 import static dev.lpa.Student.random;
 
-public class LPAStudent extends StudentExtra {
+public class lpaStudent extends StudentExtra {
     private double percentComplete;
 
-    public LPAStudent() {
+    public lpaStudent() {
         percentComplete = random.nextDouble(0, 100.001);
     }
 

@@ -1,5 +1,8 @@
 package dev.lpa;
 
+import dev.lpa.util.QueryItem;
+import dev.lpa.util.QueryList;
+
 import java.util.*;
 
 import static dev.lpa.ArraysCompare.compare_Arrays;
@@ -20,7 +23,19 @@ record GolfPlayer(String name, String position) implements Player {}
 
 public class Main {
     public static void main(String[] args) {
+        int studentCount = 10;
+        List<StudentExtra> students = new ArrayList<>();
+        for (int i = 0; i < studentCount; i++) {
+            students.add(new StudentExtra());
+        }
 
+        List<lpaStudent> lpaStudents = new ArrayList<>();
+        for (int i = 0; i < studentCount; i++) {
+            lpaStudents.add(new lpaStudent());
+        }
+        var queryList = new QueryList<>(lpaStudents);
+        var matches = queryList.getMatches("Course", "Python");
+        printMoreLists(matches);
     }
 
     public static void genericsExercise12() {
@@ -35,16 +50,16 @@ public class Main {
         for (int i = 0; i < studentCount; i++) {
             students.add(new StudentExtra());
         }
-        students.add(new LPAStudent());
+        students.add(new lpaStudent());
         printList(students);
         printMoreLists(students);
 
-        List<LPAStudent> LPAstudents = new ArrayList<>();
+        List<lpaStudent> lpaStudents = new ArrayList<>();
         for (int i = 0; i < studentCount; i++) {
-            LPAstudents.add(new LPAStudent());
+            lpaStudents.add(new lpaStudent());
         }
-        printList(LPAstudents);
-        printMoreLists(LPAstudents);
+        printList(lpaStudents);
+        printMoreLists(lpaStudents);
     }
 
     public static <T extends StudentExtra> void printList(List<T> students) {
